@@ -1,0 +1,911 @@
+version: 4
+data:
+  attachedData:
+    trivet:
+      testSuites: []
+      version: 1
+  graphs:
+    1152NbD86mY5ol8-AKezp:
+      metadata:
+        description: ""
+        id: 1152NbD86mY5ol8-AKezp
+        name: getIndex
+      nodes:
+        '[8jMuOjluCMO2YfsJTWvH5]:text "Text"':
+          data:
+            text: |-
+              Pegue os dados do ano de 2024
+
+
+              =========== input ============
+              {{input}}
+              ===============================
+          outgoingConnections:
+            - output->"Subgraph" 9sbPYVl_iKkklz9PnIoF9/input
+          visualData: 1106.8892140701612/614.2649487917784/330/771//
+        '[9sbPYVl_iKkklz9PnIoF9]:subGraph "Subgraph"':
+          data:
+            graphId: S32NDBWoT5QP-N555xeMx
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" QDXg7lG7ojzqbn4qtbpAY/input2
+          visualData: 1531.7547744422322/650.2791177051909/330/772//
+        '[MtjUWs4tgTlau0z9waIk2]:subGraph "Subgraph"':
+          data:
+            graphId: nm3hdnkJ8S9-UDmx3BG6Z
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 8jMuOjluCMO2YfsJTWvH5/input
+          visualData: 729.8629068771537/673.9050479454098/330/782//
+        '[QDXg7lG7ojzqbn4qtbpAY]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "date": "{{input1}}",
+                "csv": "{{input2}}"
+              }
+          outgoingConnections:
+            - output->"Graph Output" tirKkIiAQv9KjBRACoIex/value
+          visualData: 2045.9661973175857/622.4839056578744/230/783//
+        '[nuAoDPzhVFjkRJNeXw1m3]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-date
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Object" QDXg7lG7ojzqbn4qtbpAY/input1
+          visualData: 1620.6994529936446/394.56316686987986/330/776//
+        '[tirKkIiAQv9KjBRACoIex]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2435.099165980016/678.0743297525073/330/786//
+        '[v08WujZ7nZRobZNml5Bod]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: ""
+            id: input-path
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" MtjUWs4tgTlau0z9waIk2/input
+          visualData: 335.1708958052603/611.2402940982697/330/779//
+    DqjV60sF3muq2GsWdTmHJ:
+      metadata:
+        description: ""
+        id: DqjV60sF3muq2GsWdTmHJ
+        name: recMarkdownToCSV
+      nodes:
+        '[7gJ9Oj2cywh8xhuvEFCPH]:text "Text"':
+          data:
+            text: >-
+              You are a tool that converts markdown tables to csv.
+
+
+              Detail, the input uses coma (",") for decimal, you should use dot (".")
+
+
+              Details: If there is percentage symbol (%) remove it.
+
+
+              -------------------------------
+
+              --------- example -------------
+
+
+              ========= input ==========
+
+              |classe| |conservador|moderado| |agressivo|
+
+              |---|---|---|---|
+
+              |posfixado|65,0%|7,0%|0,0%|
+
+              |inflacao|10,0%|18,0%|14,0%|
+
+              |prefixado|3,0%|3,0%|2,0%|
+
+              |renda_fixa_global|6,0%|8,0%|6,0%|
+
+              |multimercados|11,0%|25,0%|16,0%|
+
+              |renda_var_br|3,0%|20,0%|38,0%|
+
+              |renda_var_global|0,0%|9,0%|12,0%|
+
+              |alternativos|2,0%|10,0%|12,0%|
+
+              ===========================
+
+
+              ======== output ===========
+
+              classe,conservador,moderado,agressivo
+
+              posfixado,65.0,7.0,0.0
+
+              inflacao,10.0,18.0,14.0
+
+              prefixado,3.0,3.0,2.0
+
+              renda_fixa_global,6.0,8.0,6.0
+
+              multimercados,11.0,25.0,16.0
+
+              renda_var_br,3.0,20.0,38.0
+
+              renda_var_global,0.0,9.0,12.0
+
+              alternativos,2.0,10.0,12.0
+
+              ===========================
+          outgoingConnections:
+            - output->"Chat" rWINMN98DBxYdJeXTCddx/systemPrompt
+          visualData: 988.7850745630935/306/330/710//
+        '[R8S7Mi9_NNMq4bFpFZwk7]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2006.0999593009726/786.8530162587405/330/711//
+        '[VmvwwMPjrlyjGez43yKSw]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Chat" rWINMN98DBxYdJeXTCddx/prompt
+          visualData: 1023.0201534540834/673.8041537289622/200/715//
+        '[aE5MY69xJICRM6_3YgejD]:text "Text"':
+          data:
+            text: >-
+              You are a financial analysis expert, your job is to get a markdown
+              text, and extract the table from it. You are going to get a table
+              that describes investment allocations according to risk profiles.
+
+
+              You will also need to rename the titles, namely:
+
+              * Classe de ativo -> classe
+
+              * Conservador -> conservador
+
+              * Moderado -> moderado
+
+              * Agressivo -> agressivo
+
+              * Renda Fixa Pós Fixado -> posfixado
+
+              * Renda Fixa Inflação -> inflacao
+
+              * Renda Fixa Prefixado -> prefixado
+
+              * Renda Fixa Global -> renda_fixa_global
+
+              * Multimercados FXPERI -> multimercados
+
+              * Renda Variável Brasil -> renda_var_br
+
+              * Renda Variável Global -> renda_var_global
+
+              * Alternativos -> alternativos
+
+
+              All should be simplified and use pascal_case
+
+
+              The mardown table can have two formats:
+
+              -----------------------------------------------------
+
+              ------ format one (many risk profiles) ----------
+
+
+              ======= input ==========
+
+              |Classe de ativo| |Conservador|Moderado| |Agressivo|
+
+              |---|---|---|---|---|---|
+
+              | |Precavida|Cautelosa|Estrategista|Energética|Destemida|
+
+              |Renda Fixa Pós Fixado|93,0%|65,0%|24,0%|7,0%|0,0%|
+
+              |Renda Fixa Inflação|3,0%|10,0%|17,0%|18,0%|14,0%|
+
+              |Renda Fixa Prefixado|2,0%|3,0%|4,0%|3,0%|2,0%|
+
+              |Renda Fixa Global|2,0%|6,0%|7,0%|8,0%|6,0%|
+
+              |Multimercados FXPERI|0,0%|11,0%|25,0%|25,0%|16,0%|
+
+              |Renda Variável Brasil|0,0%|3,0%|10,0%|20,0%|38,0%|
+
+              |Renda Variável Global|0,0%|0,0%|4,0%|9,0%|12,0%|
+
+              |Alternativos|0,0%|2,0%|9,0%|10,0%|12,0%|
+
+              ======================
+
+              In this format you only want to output 3 classes: Cautelosa, Energética and Destemida. And in the output you will do the following map:
+
+              * Cautelosa -> Conservador
+
+              * Energética -> Moderado
+
+              * Destemida -> Agressivo
+
+
+              So the output should be:
+
+
+              ========= output ==========
+
+              |classe| |conservador|moderado| |agressivo|
+
+              |---|---|---|---|
+
+              |posfixado|65,0%|7,0%|0,0%|
+
+              |inflacao|10,0%|18,0%|14,0%|
+
+              |prefixado|3,0%|3,0%|2,0%|
+
+              |renda_fixa_global|6,0%|8,0%|6,0%|
+
+              |multimercados|11,0%|25,0%|16,0%|
+
+              |renda_var_br|3,0%|20,0%|38,0%|
+
+              |renda_var_global|0,0%|9,0%|12,0%|
+
+              |alternativos|2,0%|10,0%|12,0%|
+
+              ===========================
+
+              -----------------------------------------------------
+
+              -----------------------------------------------------
+
+
+              -----------------------------------------------------
+
+              ------ format two (3 risk profiles) ----------
+
+
+              ========= input ==========
+
+
+              |Classe de ativo| |Conservador|Moderado| |Agressivo|
+
+              |---|---|---|---|---|---|
+
+              | |Cautelosa|Energética|Destemida|
+
+              |Renda Fixa Pós Fixado|65,0%|7,0%|0,0%|
+
+              |Renda Fixa Inflação|10,0%|18,0%|14,0%|
+
+              |Renda Fixa Prefixado|3,0%|3,0%|2,0%|
+
+              |Renda Fixa Global|6,0%|8,0%|6,0%|
+
+              |Multimercados FXPERI|11,0%|25,0%|16,0%|
+
+              |Renda Variável Brasil|3,0%|20,0%|38,0%|
+
+              |Renda Variável Global|0,0%|9,0%|12,0%|
+
+              |Alternativos|2,0%|10,0%|12,0%|
+
+              ===========================
+
+
+              in this format, the table will already be correct, so you should only correct the casing:
+
+
+              ========= output ==========
+
+              |classe| |conservador|moderado| |agressivo|
+
+              |---|---|---|---|
+
+              |posfixado|65,0%|7,0%|0,0%|
+
+              |inflacao|10,0%|18,0%|14,0%|
+
+              |prefixado|3,0%|3,0%|2,0%|
+
+              |renda_fixa_global|6,0%|8,0%|6,0%|
+
+              |multimercados|11,0%|25,0%|16,0%|
+
+              |renda_var_br|3,0%|20,0%|38,0%|
+
+              |renda_var_global|0,0%|9,0%|12,0%|
+
+              |alternativos|2,0%|10,0%|12,0%|
+
+              ===========================
+
+              -----------------------------------------------------
+
+              -----------------------------------------------------
+          outgoingConnections:
+            - output->"Chat" VmvwwMPjrlyjGez43yKSw/systemPrompt
+          visualData: 490.0844264927518/380.25475668108436/330/703//
+        '[rWINMN98DBxYdJeXTCddx]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" R8S7Mi9_NNMq4bFpFZwk7/value
+          visualData: 1531.9136671690392/719.1653221045896/200/709//
+        '[uzV3CFrU4AP9LlJAFEGsl]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Chat" VmvwwMPjrlyjGez43yKSw/prompt
+          visualData: 442/768.937204164161/330/716//
+    S32NDBWoT5QP-N555xeMx:
+      metadata:
+        description: ""
+        id: S32NDBWoT5QP-N555xeMx
+        name: indexMarkdownToCSV
+      nodes:
+        '[OIxLDtNXMS_NWCBE_DD6L]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1894.5341367394587/682.6851671894558/330/711//
+        '[OnYnPckydSVtkn-SEGn6e]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Chat" V6qG8Fu_U5_tN3_MKFj5M/prompt
+          visualData: 911.4543308925695/569.6363046596775/200/715//
+        '[RdDgDc1IwpqZXb_xcxW4L]:text "Text"':
+          data:
+            text: >
+              You are a tool that converts markdown tables to csv.
+
+
+              Detail, the input uses coma (",") for decimal, you should use dot (".")
+
+
+              You will receive tables in the format:
+
+              ======= input format ========
+
+
+              |type|value|
+
+              |---|---|
+
+              |ipca|{IPCA_VALUE}|
+
+              |selic|{SELIC_VALUE}|
+
+              |cambio|{CAMBIO_VALUE}|
+
+              ------------------------
+
+              ==============================
+
+
+              and need to output in the following csv format:
+
+              ========= output format =======
+
+              type,value
+
+              ipca,{IPCA_VALUE}
+
+              selic,{SELIC_VALUE}
+
+              cambio,{CAMBIO_VALUE}
+
+              ===============================
+
+              --------------------------------------------
+
+              for example:
+
+
+              ======== input ========
+
+              |type|value|
+
+              |---|---|
+
+              |ipca|4,0|
+
+              |selic|9,00|
+
+              |cambio|4,90|
+
+              ========================
+
+              should be converted to
+
+              ========= output =======
+
+              type,value
+
+              ipca,4.0
+
+              selic,9.0
+
+              cambio,4.9
+
+              =========================
+          outgoingConnections:
+            - output->"Chat" V6qG8Fu_U5_tN3_MKFj5M/systemPrompt
+          visualData: 877.2192520015795/201.83215093071536/330/710//
+        '[V6qG8Fu_U5_tN3_MKFj5M]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-3.5-turbo
+            presencePenalty: 0
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" OIxLDtNXMS_NWCBE_DD6L/value
+          visualData: 1420.3478446075253/614.9974730353049/200/709//
+        '[sitBmXTcP8tmL8Td3aSjJ]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Chat" OnYnPckydSVtkn-SEGn6e/prompt
+          visualData: 330.4341774384861/664.7693550948763/330/704//
+        '[z3CwYAcTGIJAzEvkFfota]:text "Text"':
+          data:
+            text: >-
+              You are a financial analysis expert, your job is to get a markdown
+              text, and extract the table from it. You are going to be given a
+              year, and only get data from this year.
+
+
+              Also, I only want to extract the rows: 
+
+              * IPCA (should be outputed as ipca, lower case)
+
+              * SELIC (should be outputed as selic, lower case)
+
+              * Taxa de Câmbio (should be outputed as cambio, lower case)
+
+
+              IMPORTANT! The final format should be:
+
+              |---|---|
+
+              |type|value|
+
+              |ipca|{IPCA_VALUE}|
+
+              |selic|{SELIC_VALUE}|
+
+              |cambio|{CAMBIO_VALUE}|
+
+              ------------------------
+
+              example: Extract the data from the year of 2025
+
+              =============input===============
+
+              # Macro Research
+
+
+              progressos nas medidas de receitas tributárias nas últimas semanas (ver seção sobre “Contas Públicas” acima) – embora a carga fiscal mais elevada também possa pressionar os preços ao consumidor no curto prazo.
+
+
+              Rumo ao neutro, a 9,00%. Nessas circunstâncias, reduzimos nossa previsão de inflação em 2024, para 3,7% (4,1% antes), e vemos agora uma taxa de câmbio mais apreciada (4,70 reais por dólar vs 4,85 antes). Isso abre espaço para o Banco Central estender o ciclo de flexibilização monetária, atingindo o nível neutro mais cedo: esperamos que a taxa Selic atinja 9,00% já em 2024 – 1,0 p.p. abaixo do que prevíamos no último relatório mensal. Para 2025, vemos a taxa básica estável em 9,00%, mantendo a projeção anterior.
+
+
+              # Projeções XP
+
+
+              | |2019|2020|2021|2022|2023 (P)|2024 (P)|2025 (P)|
+
+              |---|---|---|---|---|---|---|---|
+
+              |Crescimento do PIB (var. real %)|1,2|-3,3|4,8|3,0|3,0|1,5|2,0|
+
+              |Taxa de desemprego (%, dessaz., fim de período)|11,5|14,7|11,7|8,3|7,8|8,3|8,0|
+
+              |IPCA (var. 12m %)|4,3|4,5|10,1|5,8|4,6|3,7|4,0|
+
+              |SELIC (% a.a, fim de período)|4,50|2,00|9,25|13,75|11,75|9,00|9,00|
+
+              |Taxa de Câmbio (R$/US$, fim de período)|4,03|5,20|5,58|5,28|4,86|4,70|4,90|
+
+              |Resultado primário do governo central (% PIB)|-1,2|-9,8|-0,4|0,5|-2,4|-0,6|-1,1|
+
+              |Resultado primário do setor público (% PIB)|-0,8|-9,2|0,7|1,2|-2,3|-0,6|-1,0|
+
+              |Dívida bruta - DBGG (% PIB)|74,4|86,9|77,3|71,7|75,2|78,0|80,6|
+
+              |Balança Comercial (US$ Bi) - MDIC|35,2|50,4|61,4|62,14|98,8|86,0|88,5|
+
+              |Exportações (US$ Bi) - MDIC|221,1|209,2|280,8|334,8|337,3|342,0|355,0|
+
+              |Importações (US$ Bi) - MDIC|185,9|158,8|219,4|272,6|238,5|256,0|266,5|
+
+              |Conta Corrente (US$ Bi)|-68,0|-28,2|-46,4|-53,6|-27,1|-32,0|-42,5|
+
+              |Conta Corrente (% PIB)|-3,6|-1,9|-2,8|-2,8|-1,2|-1,3|-1,7|
+
+              |IDP (US$ Bi)|69,2|37,8|46,4|87,2|58,0|67,0|75,0|
+
+              |IDP (% PIB)|3,7|2,6|2,8|4,5|2,7|2,8|3,0|
+
+              |PIB Nominal (US$ Bi)|1.873|1.475|1.670|1.951|2.179|2.400|2.520|
+
+              |PIB Nominal (R$ Bi)|7.389|7.610|9.012|10.080|10.808|11.404|12.136|
+
+
+              Fonte: IBGE, BCB, Bloomberg, XP
+
+              =================================
+
+
+              =============output===============
+
+              |type|value|
+
+              |---|---|
+
+              |ipca|4,0|
+
+              |selic|9,00|
+
+              |cambio|4,90|
+
+              ==================================
+          outgoingConnections:
+            - output->"Chat" OnYnPckydSVtkn-SEGn6e/systemPrompt
+          visualData: 378.51860393123786/276.0869076117997/330/703//
+    T9t4JsogNdwQ3bLcnft-c:
+      metadata:
+        description: ""
+        id: T9t4JsogNdwQ3bLcnft-c
+        name: getRec
+      nodes:
+        '[8RHYMibD7IusP09EZ2nNy]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1836.3485226840307/459.38742537354085/330/798//
+        '[Kn7-X240gUkma1jcymGWs]:subGraph "Subgraph"':
+          data:
+            graphId: nm3hdnkJ8S9-UDmx3BG6Z
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" f0ddRbKzBBuP8PWsgedcM/input
+          visualData: 858.7904850556833/450.3106511169949/330/795//
+        '[RHmepeWdEn3gv-FOp2Tgk]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" Kn7-X240gUkma1jcymGWs/input
+          visualData: 436.9545530019059/424.2039597935361/330/797//
+        '[f0ddRbKzBBuP8PWsgedcM]:subGraph "Subgraph"':
+          data:
+            graphId: DqjV60sF3muq2GsWdTmHJ
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" 8RHYMibD7IusP09EZ2nNy/value
+          visualData: 1338.7472218965327/480.4306107134428/330/756//
+    VP_Q3_AueD1HTYB46H40u:
+      metadata:
+        description: ""
+        id: VP_Q3_AueD1HTYB46H40u
+        name: main
+      nodes:
+        '[AXjevX9bEIaYzdbffZGE0]:externalCall "External Call"':
+          data:
+            functionName: profileAllocation
+            useErrorOutput: false
+            useFunctionNameInput: false
+          visualData: -433.0513533980001/1548.652821277806/377.70179249074/808//
+        '[G3mV8BmNwORZcIlLjasJe]:subGraph "Subgraph"':
+          data:
+            graphId: oWwjuAO5vMbnMH1s_payA
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" i8Vpu0xyK-fbH-9w2FNhi/input2
+          visualData: -1264.4908132827038/1669.1848183352076/330/799//
+        '[N2yeIAsTroFp_-Lbi5dtK]:subGraph "Subgraph"':
+          data:
+            graphId: T9t4JsogNdwQ3bLcnft-c
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" i8Vpu0xyK-fbH-9w2FNhi/input1
+          visualData: -1267.096234636724/1451.632135274523/330/797//
+        '[i8Vpu0xyK-fbH-9w2FNhi]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "past": "{{input1}}",
+                "deltas": "{{input2}}"
+              }
+          outgoingConnections:
+            - output->"External Call" AXjevX9bEIaYzdbffZGE0/arguments
+          visualData: -778.5797307579417/1566.2706748514106/230/807//
+        '[iTKkLwuNwmdbwMa-xQYt0]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/imgs/24-03.pdf
+          outgoingConnections:
+            - output->"Subgraph" N2yeIAsTroFp_-Lbi5dtK/input
+          visualData: -1712.9359429710414/1427.3382704596534/330/796//
+    nm3hdnkJ8S9-UDmx3BG6Z:
+      metadata:
+        description: ""
+        id: nm3hdnkJ8S9-UDmx3BG6Z
+        name: pdfToMarkdown
+      nodes:
+        '[5nGMyjVD8uEPVr43HExbb]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.id
+            usePathInput: false
+          outgoingConnections:
+            - match->"Object" eLUw60f3S9Ph8wr--K2hM/input
+          visualData: 1989.4822454678101/280.6869139089145/280/1311//
+        '[EEXHCeNGVyp2JOSk9hGhz]:externalCall "External Call"':
+          data:
+            functionName: llamaGetMarkdownResult
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Graph Output" FGZPKh_m32BzkXUsRxfNx/value
+          visualData: 2734.5299801240562/345.82863879393466/180/1311//
+        '[FGZPKh_m32BzkXUsRxfNx]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3022.723007978118/365.9932789565483/330/1311//
+        '[HAdo8F5vV2KX0IeKs1dvf]:externalCall "External Call"':
+          data:
+            functionName: llamaUploadFile
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Extract Object Path" 5nGMyjVD8uEPVr43HExbb/object
+          visualData: 1347.0171340495513/287.12494981010155/501.0867700909696/1312//
+        '[TKPf98hnBytyLXlLDUivO]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: /Users/paulochade/Documents/projects/enter/riviet/data/table/table-24-01.pdf
+            id: input
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Object" z9uoAY-bnlo6CN30OamCK/input
+          visualData: 681.1048126959208/247.78563536661963/330/1313//
+        '[eLUw60f3S9Ph8wr--K2hM]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "id": "{{input}}",
+                "timeout": 20
+              }
+          outgoingConnections:
+            - output->"External Call" EEXHCeNGVyp2JOSk9hGhz/arguments
+          visualData: 2412.0743341040593/303.37164608384916/230/1311//
+        '[z9uoAY-bnlo6CN30OamCK]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "path": "{{input}}"
+              }
+          outgoingConnections:
+            - output->"External Call" HAdo8F5vV2KX0IeKs1dvf/arguments
+          visualData: 1090.2007562193585/310.2213178671905/230/1314//
+    oWwjuAO5vMbnMH1s_payA:
+      metadata:
+        description: ""
+        id: oWwjuAO5vMbnMH1s_payA
+        name: getDelta
+      nodes:
+        '[08XnwXZVqEQbcFLAk93Bd]:text "Text"':
+          data:
+            text: 24-01
+          outgoingConnections:
+            - output->"Subgraph" PmJfNYKYEWykYd5qC50Pp/input-date
+          visualData: 541.9539524421004/478/330/810//
+        '[2WiZy4p5l8b5c97zjINTc]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/index/table-24-01.pdf
+          outgoingConnections:
+            - output->"Subgraph" PmJfNYKYEWykYd5qC50Pp/input-path
+          visualData: 533.2969172618805/674.7987212237576/330/809//
+        '[9bjMFAt5_Nt-E2OEnBV-a]:text "Text"':
+          data:
+            text: 24-01
+          outgoingConnections:
+            - output->"Subgraph" xd7T2apsxl7Xy6aNeSfNG/input-date
+          visualData: 534.1483499615401/845.9360709542431/330/799//
+        '[AsY_OxBBO0IbA1BVXHgZ6]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2470.6808804366847/1003.7077076035052/330/814//
+        '[Ayuw0uBqsomrAC5k8Sp7P]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/index/table-24-02.pdf
+          outgoingConnections:
+            - output->"Subgraph" xd7T2apsxl7Xy6aNeSfNG/input-path
+          visualData: 504.1786066662393/1012.0363197770307/330/800//
+        '[DlQLvKc-p1I2ojFJXFWLR]:externalCall "External Call"':
+          data:
+            functionName: calculateDelta
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Graph Output" AsY_OxBBO0IbA1BVXHgZ6/value
+          visualData: 2080.319534769433/1012.9007385616575/180/813//
+        '[NWAr3OjWo0edMk8VdziCK]:text "Text"':
+          data:
+            text: 24-01
+          outgoingConnections:
+            - output->"Subgraph" US254HFhed1NTOA_5DQ0f/input-date
+          visualData: 496.20788551695307/1171.1400519078452/330/816//
+        '[PmJfNYKYEWykYd5qC50Pp]:subGraph "Subgraph"':
+          data:
+            graphId: 1152NbD86mY5ol8-AKezp
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" W8pDxouraQ6ExQI-rTO15/input1
+          visualData: 996.439112273755/602.8427358246213/330/785//
+        '[T5LG3rI09aW5fNdOrlQhF]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/index/table-24-04.pdf
+          outgoingConnections:
+            - output->"Subgraph" WTVRl6WJGB-D2ueeptPhV/input-path
+          visualData: 504.9771640888497/1757.7166411688418/330/806//
+        '[US254HFhed1NTOA_5DQ0f]:subGraph "Subgraph"':
+          data:
+            graphId: 1152NbD86mY5ol8-AKezp
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" W8pDxouraQ6ExQI-rTO15/input3
+          visualData: 1027.0488137022346/1243.137140827506/330/804//
+        '[UhMQlsfA8NHdKbBODvEy5]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/index/table-24-03.pdf
+          outgoingConnections:
+            - output->"Subgraph" US254HFhed1NTOA_5DQ0f/input-path
+          visualData: 500.1135569043191/1352.1454831910062/330/818//
+        '[W8pDxouraQ6ExQI-rTO15]:object "Object"':
+          data:
+            jsonTemplate: '["{{input1}}", "{{input2}}", "{{input3}}", "{{input4}}"]'
+          outgoingConnections:
+            - output->"External Call" DlQLvKc-p1I2ojFJXFWLR/arguments
+          visualData: 1660.197105140605/975.7742069567556/230/811//
+        '[WTVRl6WJGB-D2ueeptPhV]:subGraph "Subgraph"':
+          data:
+            graphId: 1152NbD86mY5ol8-AKezp
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" W8pDxouraQ6ExQI-rTO15/input4
+          visualData: 1021.5849080293392/1599.5597112365065/330/812//
+        '[_MnuABgCQZ8KHQlHAw5w3]:text "Text"':
+          data:
+            text: 24-01
+          outgoingConnections:
+            - output->"Subgraph" WTVRl6WJGB-D2ueeptPhV/input-date
+          visualData: 498.7826579000099/1552.0069951236483/330/805//
+        '[xd7T2apsxl7Xy6aNeSfNG]:subGraph "Subgraph"':
+          data:
+            graphId: 1152NbD86mY5ol8-AKezp
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Object" W8pDxouraQ6ExQI-rTO15/input2
+          visualData: 1010.7886146545547/889.4778115404638/330/798//
+    xmDBnt_fFjbRJQPzWOY2H:
+      metadata:
+        description: ""
+        id: xmDBnt_fFjbRJQPzWOY2H
+        name: getWallet
+      nodes: {}
+  metadata:
+    description: ""
+    id: QiMtlIf2TmgkjfxPGu1Cd
+    title: enter_test
+  plugins: []

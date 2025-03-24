@@ -1,0 +1,582 @@
+version: 4
+data:
+  attachedData:
+    trivet:
+      testSuites:
+        - id: azV4M3o4FSr-2aykCefr7
+          name: Test Validator BMP
+          testCases:
+            - expectedOutput:
+                AUTOR_NOME_COMPLETO: PATRÍCIA NASCIMENTO DE ALMEIDA
+                autor_artigo: a Autora
+                autor_artigo_sujeito: a Autora
+                caps_autor_artigo_sujeito: A Autora
+                dependency_alteracao_itinerario: ""
+                dependency_avaria_bagagem_ausencia_demonstracao: ""
+                dependency_avaria_bagagem_inversao_do_onus: ""
+                dependency_inversao_do_onus: Fica
+                destino_da_viagem: Istambul
+                itinerario_completo: Rio de Janeiro – São Paulo - Istambul
+                nome_da_acao: AÇÃO INDENIZATÓRIA POR DANOS MORAIS E MATERIAIS
+                origem_da_viagem: Rio de Janeiro
+                tag_autor: Autora
+              id: n16HFB-5jZ0VPncKjZY8B
+              input:
+                enderecamento: EXCELENTISSIMO ETC
+                peticao_inicial: file_input
+          testGraph: OhbuUfcMpthjrriAEcVgD
+          validationGraph: J7k0Em3n2Lbdqc5rEaoKL
+      version: 1
+  graphs:
+    oy4gSk9dfV4Rlc86I22Tx:
+      metadata:
+        description: ""
+        id: oy4gSk9dfV4Rlc86I22Tx
+        name: main_challenge
+      nodes:
+        '[DJEqsJ3G8HsTb3Y9suArj]:text "Text"':
+          data:
+            text: "{{input}}"
+          visualData: -667.1870949944378/1341.8185207338129/330/718//
+        '[EKapXzVd7FOs2PSRoFpBB]:subGraph "Subgraph"':
+          data:
+            graphId: wMCzVWaRyu2cpdzhHyNSg
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" f-9c9-71WAgHlRvkw7Dfq/input
+          visualData: -944.107100700182/1044.4618916857917/330/689//
+        '[F79MtZQa56ueWbNskQsek]:text "Text"':
+          data:
+            text: >-
+              # Macro Research
+
+
+              progressos nas medidas de receitas tributárias nas últimas semanas (ver seção sobre “Contas Públicas” acima) – embora a carga fiscal mais elevada também possa pressionar os preços ao consumidor no curto prazo.
+
+
+              Rumo ao neutro, a 9,00%. Nessas circunstâncias, reduzimos nossa previsão de inflação em 2024, para 3,7% (4,1% antes), e vemos agora uma taxa de câmbio mais apreciada (4,70 reais por dólar vs 4,85 antes). Isso abre espaço para o Banco Central estender o ciclo de flexibilização monetária, atingindo o nível neutro mais cedo: esperamos que a taxa Selic atinja 9,00% já em 2024 – 1,0 p.p. abaixo do que prevíamos no último relatório mensal. Para 2025, vemos a taxa básica estável em 9,00%, mantendo a projeção anterior.
+
+
+              # Projeções XP
+
+
+              | |2019|2020|2021|2022|2023 (P)|2024 (P)|2025 (P)|
+
+              |---|---|---|---|---|---|---|---|
+
+              |Crescimento do PIB (var. real %)|1,2|-3,3|4,8|3,0|3,0|1,5|2,0|
+
+              |Taxa de desemprego (%, dessaz., fim de período)|11,5|14,7|11,7|8,3|7,8|8,3|8,0|
+
+              |IPCA (var. 12m %)|4,3|4,5|10,1|5,8|4,6|3,7|4,0|
+
+              |SELIC (% a.a, fim de período)|4,50|2,00|9,25|13,75|11,75|9,00|9,00|
+
+              |Taxa de Câmbio (R$/US$, fim de período)|4,03|5,20|5,58|5,28|4,86|4,70|4,90|
+
+              |Resultado primário do governo central (% PIB)|-1,2|-9,8|-0,4|0,5|-2,4|-0,6|-1,1|
+
+              |Resultado primário do setor público (% PIB)|-0,8|-9,2|0,7|1,2|-2,3|-0,6|-1,0|
+
+              |Dívida bruta - DBGG (% PIB)|74,4|86,9|77,3|71,7|75,2|78,0|80,6|
+
+              |Balança Comercial (US$ Bi) - MDIC|35,2|50,4|61,4|62,14|98,8|86,0|88,5|
+
+              |Exportações (US$ Bi) - MDIC|221,1|209,2|280,8|334,8|337,3|342,0|355,0|
+
+              |Importações (US$ Bi) - MDIC|185,9|158,8|219,4|272,6|238,5|256,0|266,5|
+
+              |Conta Corrente (US$ Bi)|-68,0|-28,2|-46,4|-53,6|-27,1|-32,0|-42,5|
+
+              |Conta Corrente (% PIB)|-3,6|-1,9|-2,8|-2,8|-1,2|-1,3|-1,7|
+
+              |IDP (US$ Bi)|69,2|37,8|46,4|87,2|58,0|67,0|75,0|
+
+              |IDP (% PIB)|3,7|2,6|2,8|4,5|2,7|2,8|3,0|
+
+              |PIB Nominal (US$ Bi)|1.873|1.475|1.670|1.951|2.179|2.400|2.520|
+
+              |PIB Nominal (R$ Bi)|7.389|7.610|9.012|10.080|10.808|11.404|12.136|
+
+
+              Fonte: IBGE, BCB, Bloomberg, XP
+          outgoingConnections:
+            - output->"Chat" RO0JzWwWA_ajiA3UNS1g1/prompt
+            - output->"Text" qBM1H6PBiiDklUaPYJS56/input
+          visualData: -1852.687404817875/790.5633033693789/330/688//
+        '[RO0JzWwWA_ajiA3UNS1g1]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" DJEqsJ3G8HsTb3Y9suArj/input
+          visualData: -1389.2628102652209/1252.7211029525993/536.1730702415787/716//
+        '[V3HKEi5SxAXIo2QQpjfyn]:array "Array"':
+          data:
+            flatten: false
+            flattenDeep: false
+          outgoingConnections:
+            - output->"External Call" sZR_L2QXhbt5Q7Gms7HsM/arguments
+          visualData: 467.06994786768547/1095.5327900927027/230/714//
+        '[XBxC_Ebc7vBVYk3K__yow]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "date": "24-03",
+                "csv": "{{input}}"
+              }
+          outgoingConnections:
+            - output->"Array" V3HKEi5SxAXIo2QQpjfyn/input3
+          visualData: -72.93190226076689/1188.3920321375854/230/702//
+        '[atBfCpfy1sxk1IJvd6T9M]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "date": "24-01",
+                "csv": "{{input}}"
+              }
+          outgoingConnections:
+            - output->"Array" V3HKEi5SxAXIo2QQpjfyn/input1
+          visualData: -66.89160397719522/752.1502424361554/230/700//
+        '[f-9c9-71WAgHlRvkw7Dfq]:text "Text"':
+          data:
+            text: "{{input}}"
+          outgoingConnections:
+            - output->"Object" XBxC_Ebc7vBVYk3K__yow/input
+            - output->"Object" atBfCpfy1sxk1IJvd6T9M/input
+            - output->"Object" k8dIELrjOx4t-flKbMVpJ/input
+            - output->"Object" rzzRLJVyqGddroEz3qv4D/input
+          visualData: -554.6848472561522/1119.7238720636944/330/691//
+        '[iRVNT9OML9qnogd7ZVY9u]:subGraph "Deploy Template Name"':
+          data:
+            graphId: VBfwPp3tXdEmMiB6_sXzD
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          visualData: 2653/646/330/411//
+        '[ihDp8JSnMxDY-SEFwq_UT]:getGlobal "Global - Deploy"':
+          data:
+            dataType: boolean
+            id: deploy
+            onDemand: false
+            useIdInput: false
+            wait: true
+          outgoingConnections:
+            - value->"Deploy Template Name" iRVNT9OML9qnogd7ZVY9u/deploy
+          visualData: 2320.267940907117/595.8935897349443/230/541//
+        '[k8dIELrjOx4t-flKbMVpJ]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "date": "24-02",
+                "csv": "{{input}}"
+              }
+          outgoingConnections:
+            - output->"Array" V3HKEi5SxAXIo2QQpjfyn/input2
+          visualData: -72.93190226076688/980.3383010928231/230/704//
+        '[qBM1H6PBiiDklUaPYJS56]:text "Text"':
+          data:
+            text: |-
+              Pegue os dados do ano de 2024
+
+
+              =========== input ============
+              {{input}}
+              ===============================
+          outgoingConnections:
+            - output->"Subgraph" EKapXzVd7FOs2PSRoFpBB/input
+          visualData: -1377.1670490136898/932.6586696729094/330/687//
+        '[rzzRLJVyqGddroEz3qv4D]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "date": "24-04",
+                "csv": "{{input}}"
+              }
+          outgoingConnections:
+            - output->"Array" V3HKEi5SxAXIo2QQpjfyn/input4
+          visualData: -62.86473845481411/1406.5129269883005/230/705//
+        '[sZR_L2QXhbt5Q7Gms7HsM]:externalCall "External Call"':
+          data:
+            functionName: calculateDelta
+            useErrorOutput: false
+            useFunctionNameInput: false
+          visualData: 902.2266884067851/1223.2935085547454/180/715//
+    wMCzVWaRyu2cpdzhHyNSg:
+      metadata:
+        description: ""
+        id: wMCzVWaRyu2cpdzhHyNSg
+        name: mardownToCSV
+      nodes:
+        '[-VU2jS6518qJ7TKk8ljPM]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1873.0734948471354/436.82072104213114/330/709//
+        '[81-yDJjF_4zZMxntj-TRV]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Chat" kUzhMAJfOmA7BGYJWsZxr/prompt
+          visualData: 382.9183890004573/671.2946586141006/330/685//
+        '[9f4bkKbhHcmnuauJelp2w]:text "Text"':
+          data:
+            text: >-
+              You are a financial analysis expert, your job is to get a markdown
+              text, and extract the table from it. You are going to be given a
+              year, and only get data from this year.
+
+
+              Also, I only want to extract the rows: 
+
+              * IPCA (should be outputed as ipca, lower case)
+
+              * SELIC (should be outputed as selic, lower case)
+
+              * Taxa de Câmbio (should be outputed as cambio, lower case)
+
+
+              IMPORTANT! The final format should be:
+
+              |---|---|
+
+              |type|value|
+
+              |ipca|{IPCA_VALUE}|
+
+              |selic|{SELIC_VALUE}|
+
+              |cambio|{CAMBIO_VALUE}|
+
+              ------------------------
+
+              example: Extract the data from the year of 2025
+
+              =============input===============
+
+              # Macro Research
+
+
+              progressos nas medidas de receitas tributárias nas últimas semanas (ver seção sobre “Contas Públicas” acima) – embora a carga fiscal mais elevada também possa pressionar os preços ao consumidor no curto prazo.
+
+
+              Rumo ao neutro, a 9,00%. Nessas circunstâncias, reduzimos nossa previsão de inflação em 2024, para 3,7% (4,1% antes), e vemos agora uma taxa de câmbio mais apreciada (4,70 reais por dólar vs 4,85 antes). Isso abre espaço para o Banco Central estender o ciclo de flexibilização monetária, atingindo o nível neutro mais cedo: esperamos que a taxa Selic atinja 9,00% já em 2024 – 1,0 p.p. abaixo do que prevíamos no último relatório mensal. Para 2025, vemos a taxa básica estável em 9,00%, mantendo a projeção anterior.
+
+
+              # Projeções XP
+
+
+              | |2019|2020|2021|2022|2023 (P)|2024 (P)|2025 (P)|
+
+              |---|---|---|---|---|---|---|---|
+
+              |Crescimento do PIB (var. real %)|1,2|-3,3|4,8|3,0|3,0|1,5|2,0|
+
+              |Taxa de desemprego (%, dessaz., fim de período)|11,5|14,7|11,7|8,3|7,8|8,3|8,0|
+
+              |IPCA (var. 12m %)|4,3|4,5|10,1|5,8|4,6|3,7|4,0|
+
+              |SELIC (% a.a, fim de período)|4,50|2,00|9,25|13,75|11,75|9,00|9,00|
+
+              |Taxa de Câmbio (R$/US$, fim de período)|4,03|5,20|5,58|5,28|4,86|4,70|4,90|
+
+              |Resultado primário do governo central (% PIB)|-1,2|-9,8|-0,4|0,5|-2,4|-0,6|-1,1|
+
+              |Resultado primário do setor público (% PIB)|-0,8|-9,2|0,7|1,2|-2,3|-0,6|-1,0|
+
+              |Dívida bruta - DBGG (% PIB)|74,4|86,9|77,3|71,7|75,2|78,0|80,6|
+
+              |Balança Comercial (US$ Bi) - MDIC|35,2|50,4|61,4|62,14|98,8|86,0|88,5|
+
+              |Exportações (US$ Bi) - MDIC|221,1|209,2|280,8|334,8|337,3|342,0|355,0|
+
+              |Importações (US$ Bi) - MDIC|185,9|158,8|219,4|272,6|238,5|256,0|266,5|
+
+              |Conta Corrente (US$ Bi)|-68,0|-28,2|-46,4|-53,6|-27,1|-32,0|-42,5|
+
+              |Conta Corrente (% PIB)|-3,6|-1,9|-2,8|-2,8|-1,2|-1,3|-1,7|
+
+              |IDP (US$ Bi)|69,2|37,8|46,4|87,2|58,0|67,0|75,0|
+
+              |IDP (% PIB)|3,7|2,6|2,8|4,5|2,7|2,8|3,0|
+
+              |PIB Nominal (US$ Bi)|1.873|1.475|1.670|1.951|2.179|2.400|2.520|
+
+              |PIB Nominal (R$ Bi)|7.389|7.610|9.012|10.080|10.808|11.404|12.136|
+
+
+              Fonte: IBGE, BCB, Bloomberg, XP
+
+              =================================
+
+
+              =============output===============
+
+              |type|value|
+
+              |---|---|
+
+              |ipca|4,0|
+
+              |selic|9,00|
+
+              |cambio|4,90|
+
+              ==================================
+          outgoingConnections:
+            - output->"Chat" kUzhMAJfOmA7BGYJWsZxr/systemPrompt
+          visualData: 376.14816126718665/275.6539951981982/330/703//
+        '[SRe7WKev8-F6LLhp9QVE1]:text "Text"':
+          data:
+            text: >
+              You are a tool that converts markdown tables to csv.
+
+
+              Detail, the input uses coma (",") for decimal, you should use dot (".")
+
+
+              You will receive tables in the format:
+
+              ======= input format ========
+
+
+              |type|value|
+
+              |---|---|
+
+              |ipca|{IPCA_VALUE}|
+
+              |selic|{SELIC_VALUE}|
+
+              |cambio|{CAMBIO_VALUE}|
+
+              ------------------------
+
+              ==============================
+
+
+              and need to output in the following csv format:
+
+              ========= output format =======
+
+              type,value
+
+              ipca,{IPCA_VALUE}
+
+              selic,{SELIC_VALUE}
+
+              cambio,{CAMBIO_VALUE}
+
+              ===============================
+
+              --------------------------------------------
+
+              for example:
+
+
+              ======== input ========
+
+              |type|value|
+
+              |---|---|
+
+              |ipca|4,0|
+
+              |selic|9,00|
+
+              |cambio|4,90|
+
+              ========================
+
+              should be converted to
+
+              ========= output =======
+
+              type,value
+
+              ipca,4.0
+
+              selic,9.0
+
+              cambio,4.9
+
+              =========================
+          outgoingConnections:
+            - output->"Chat" mJzlm4B2a-wfxvYFWexiS/systemPrompt
+          visualData: 977.1648721907284/58.923187112112025/330/707//
+        '[kUzhMAJfOmA7BGYJWsZxr]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: o1-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Chat" mJzlm4B2a-wfxvYFWexiS/prompt
+          visualData: 941.6165498527356/439.66706718273394/392.9527786698809/722//
+        '[mJzlm4B2a-wfxvYFWexiS]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: o1-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" -VU2jS6518qJ7TKk8ljPM/value
+          visualData: 1469.643310880534/407.8884060335673/230/716//
+    ziO3SDNmpuw8VcqPBf8aL:
+      metadata:
+        description: ""
+        id: ziO3SDNmpuw8VcqPBf8aL
+        name: pdfToMarkdown
+      nodes:
+        '[2Bl0RKsmye8UfAxaOVMob]:object "Object"':
+          data:
+            jsonTemplate: |-
+              {
+                "id": "{{input}}",
+                "timeout": 10
+              }
+          outgoingConnections:
+            - output->"External Call" dgw3tPvNLlIhMhlJE6nVh/arguments
+          visualData: 2469.4042524351025/471.4117526041322/230/1308//
+        '[QIcUQyBWc1SjrlM27VBVM]:externalCall "External Call"':
+          data:
+            functionName: uploadFile
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Extract Object Path" QpMo_rD3KJg56uPOvQelh/object
+          visualData: 1406.3800753217217/455.1650563303846/501.0867700909696/1306//
+        '[QpMo_rD3KJg56uPOvQelh]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.id
+            usePathInput: false
+          outgoingConnections:
+            - match->"Object" 2Bl0RKsmye8UfAxaOVMob/input
+          visualData: 2046.8121637988534/448.7270204291975/280/1307//
+        '[Wiq5aIb48Hc4jwsc17x71]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: /Users/paulochade/Documents/projects/enter/riviet/data/table/table-24-01.pdf
+            id: input
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Object" adynGrRiO1Kb_AvP4uoZg/value1
+          visualData: 582/420/330/1298//
+        '[ZAnhfZqcJ5fwUEPZ_uqLl]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3080.052926309161/534.0333854768313/330/1310//
+        '[adynGrRiO1Kb_AvP4uoZg]:object "Object"':
+          data:
+            jsonTemplate: '{"path": "{{value1}}"}'
+          outgoingConnections:
+            - output->"External Call" QIcUQyBWc1SjrlM27VBVM/arguments
+          visualData: 1037.2889406026509/467.8684025333322/241.22036593095822/1305//
+        '[dgw3tPvNLlIhMhlJE6nVh]:externalCall "External Call"':
+          data:
+            functionName: getMarkdownResult
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Graph Output" ZAnhfZqcJ5fwUEPZ_uqLl/value
+          visualData: 2791.8598984550995/513.8687453142177/180/1309//
+  metadata:
+    description: ""
+    id: GuX4N69d81LeoobNXiH0u
+    title: talisman_test
+  plugins:
+    - id: anthropic
+      name: Anthropic
+      type: built-in
+    - id: rivet-plugin-example-python-exec@latest
+      package: rivet-plugin-example-python-exec
+      tag: latest
+      type: package
+    - id: rivet-plugin-fs@latest
+      package: rivet-plugin-fs
+      tag: latest
+      type: package
