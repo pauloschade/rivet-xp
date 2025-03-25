@@ -72,6 +72,289 @@ data:
           outgoingConnections:
             - data->"Subgraph" MtjUWs4tgTlau0z9waIk2/input
           visualData: 335.1708958052603/611.2402940982697/330/779//
+    16wOUesH7bJffpp6jaXP2:
+      metadata:
+        description: ""
+        id: 16wOUesH7bJffpp6jaXP2
+        name: getMarketOverviewByAsset
+      nodes:
+        '[2-WVtdjZVDmsfPx4ISRg3]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.second_half
+            usePathInput: false
+          outgoingConnections:
+            - match->"Chat" ezn5is9QL2LxvhqN1ytaw/prompt
+          visualData: 164.0578831227433/1490.324356478104/280/922//
+        '[4KOCmaRGgKA7kerxgVbte]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-text
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"External Call" niihFsZQDKDideOne7aSn/arguments
+          visualData: -541.9418302294537/1179.179345310252/330/921//
+        '[5LmAQ4sMvuFGudorLGvDG]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" rxBikBPW4oCHosTbFHSJa/value
+          visualData: 1571.5826265116093/226.46253729545845/230/887//
+        '[8zmSD6UWePJ492rQaZO6I]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.first_half
+            usePathInput: false
+          outgoingConnections:
+            - match->"Chat" bjVHv6fKi_mgDaPWxxOlM/prompt
+          visualData: 159.9106879776634/1150.7021199270803/280/923//
+        '[C5gAKNO2ODLeWFKtXfdG0]:text "Text"':
+          data:
+            text: |-
+              ======== ASSET ==========
+              The ASSET TYPE IS:
+              {{asset}}
+
+              ---------
+              =========================
+              node description: {{description}}
+              ========== Report ==========
+              {{text}}
+              =========================
+          outgoingConnections:
+            - output->"Chat" 5LmAQ4sMvuFGudorLGvDG/prompt
+          visualData: 1043.5207689193999/437.27738135930827/330/896//
+        '[PMyCLfwm3g75lqE0guZPU]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-asset
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" C5gAKNO2ODLeWFKtXfdG0/asset
+          visualData: 487.6122014409871/207.498935304185/330/878//
+        '[a8MENLF8QAypuc_dKSm3w]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-asset_desc
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" C5gAKNO2ODLeWFKtXfdG0/description
+          visualData: 462.1936721663045/500.09192189823284/330/884//
+        '[bjVHv6fKi_mgDaPWxxOlM]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" fJBAqA1Ab5iBPptD8F367/input1
+          visualData: 507.13587260776563/853.6236372386894/230/916//
+        '[ezn5is9QL2LxvhqN1ytaw]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" fJBAqA1Ab5iBPptD8F367/input2
+          visualData: 509.9006693711523/1233.335426858819/230/917//
+        '[fJBAqA1Ab5iBPptD8F367]:text "Text"':
+          data:
+            text: |-
+              {{input1}}
+
+              {{input2}}
+          outgoingConnections:
+            - output->"Text" C5gAKNO2ODLeWFKtXfdG0/text
+          visualData: 913.3178060005141/1029.0510623380692/330/918//
+        '[lQVLMi9gtH4n5-i_Qgt2B]:text "Text"':
+          data:
+            text: >-
+              You are a economits, you have all the certifications, masters,
+              PhD, and you are specially the best at reading market overviews
+              and extracting all the relevant information there.
+
+
+              You are not a mega summarizer, meaning that you do not summarize a lot, but rather keep all the important stuff.
+
+
+              You also provide analysis in your answers. But keep it true to the report.
+          outgoingConnections:
+            - output->"Chat" bjVHv6fKi_mgDaPWxxOlM/systemPrompt
+            - output->"Chat" ezn5is9QL2LxvhqN1ytaw/systemPrompt
+          visualData: 47.936419060505784/730.4530118923157/330/912//
+        '[niihFsZQDKDideOne7aSn]:externalCall "External Call"':
+          data:
+            functionName: splitStringInHalf
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Extract Object Path" 2-WVtdjZVDmsfPx4ISRg3/object
+            - result->"Extract Object Path" 8zmSD6UWePJ492rQaZO6I/object
+          visualData: -101.36260616237104/1252.9996001723846/180/908//
+        '[rxBikBPW4oCHosTbFHSJa]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2001/319/330/876//
+        '[xzVlMsZJEE_JiVrDVzOwA]:text "Text"':
+          data:
+            text: >-
+              You are a economits, you have all the certifications, masters,
+              PhD, and you are specially the best at reading market overviews
+              and predicting outcomes for asset types.
+
+
+              NOTE: ALL THESE REPORTS ARE RELATED TO THE BRAZIL MARKET
+
+
+              You are going to be given a text, and an asset type. And you are going to provide a summary of how this asset type may be affected by the market.
+
+
+              Focus on:
+
+              * Past (not that long ago) context
+
+              * What is expected in the future
+
+              * Are these assets prices going up or down? On this prediction
+
+              * Consider 3 profiles, Conservative, Moderate, Risky, Determine if they should invest.
+
+
+              JUST FOCUS ON THE SPECIFIED ASSET CLASS
+
+
+              You are also going to get an asset description to help out
+
+
+              An example output should be organized in the following way:
+
+
+              NOTE: THE OUTPUT SHOULD BE IN MARKDOWN FORMAT
+
+
+              =========== output ============
+
+              # ASSET
+
+              {{ASSET DEFINED}}
+
+              ## context
+
+              {HOW HAS THIS ASSET BEEN DOING}
+
+
+              ## What is expected in the future?
+
+              {WHAT EVENTS CAN EFFECT THIS ASSET}
+
+              {HOW IT WILL BE AFFECTED}
+
+              {ARE THERE ANY UNCERTAINTIES? HOW DO THEY AFFECT}
+
+              {QUANTITATIVE METRICS}
+
+
+              ## Price prediction
+
+              up | down | regurlar
+
+              (Just output a single word)
+
+
+              ## Investment profiles
+
+              * Conservative: buy | sell
+
+              * Moderate: buy | sell
+
+              * Moderate: buy | sell
+
+              ===============================
+          outgoingConnections:
+            - output->"Chat" 5LmAQ4sMvuFGudorLGvDG/systemPrompt
+          visualData: 968.3095255144877/-100.23079105686432/330/874//
     DqjV60sF3muq2GsWdTmHJ:
       metadata:
         description: ""
@@ -429,7 +712,7 @@ data:
             useUserInput: false
           outgoingConnections:
             - response->"Chat" V6qG8Fu_U5_tN3_MKFj5M/prompt
-          visualData: 911.4543308925695/569.6363046596775/200/715//
+          visualData: 935.0277583187215/674.4070932203526/200/716//
         '[RdDgDc1IwpqZXb_xcxW4L]:text "Text"':
           data:
             text: >
@@ -692,12 +975,67 @@ data:
         id: VP_Q3_AueD1HTYB46H40u
         name: main
       nodes:
+        '[4T0gTLVyIgyamkhaqQlIJ]:subGraph "Subgraph"':
+          data:
+            graphId: xmDBnt_fFjbRJQPzWOY2H
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output-asset->"Subgraph"
+              9g2HijAlF79TD7XDbcDPA/input-wallet_allocation_asset
+            - output-asset->"Subgraph"
+              CYlReI6NPndYbfa2OpH-E/input-wallet_allocation_asset
+            - output-asset->"Subgraph" ncUDyl1BdnOZdM0ZWE2qm/input-client_assets
+            - output-class-md->"Subgraph"
+              9g2HijAlF79TD7XDbcDPA/input-wallet_allocation_category
+            - output-class-md->"Subgraph"
+              CYlReI6NPndYbfa2OpH-E/input-wallet_allocation_category
+            - output-class-md->"Subgraph"
+              ncUDyl1BdnOZdM0ZWE2qm/input-client_alloc_class
+            - output-performance->"Subgraph"
+              CYlReI6NPndYbfa2OpH-E/input-performance
+            - output-performance->"Subgraph"
+              ncUDyl1BdnOZdM0ZWE2qm/input-client_performance
+          visualData: -430.0900791301573/1844.3242390038552/330/899//
+        '[9g2HijAlF79TD7XDbcDPA]:subGraph "Subgraph"':
+          data:
+            graphId: oz-XXTCTq5KX5iXwUP02n
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" LQvLpslw9ruN3csphzm5y/future
+          visualData: 285.638826572764/1919.590650803851/330/929//
         '[AXjevX9bEIaYzdbffZGE0]:externalCall "External Call"':
           data:
             functionName: profileAllocation
             useErrorOutput: false
             useFunctionNameInput: false
-          visualData: -433.0513533980001/1548.652821277806/377.70179249074/808//
+          outgoingConnections:
+            - result->"Subgraph" ncUDyl1BdnOZdM0ZWE2qm/input-quant_alloc
+          visualData: -445.90824927187685/1600.080404773313/377.70179249074/809//
+        '[CYlReI6NPndYbfa2OpH-E]:subGraph "Subgraph"':
+          data:
+            graphId: rUtkvHpq-1LOCiNM09uRu
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" LQvLpslw9ruN3csphzm5y/current
+          visualData: 269.8900758488559/2216.3248839435532/330/930//
+        '[DuLSWxIxPnKtCdRdCA9Am]:subGraph "Subgraph"':
+          data:
+            graphId: jLnFcrtCg8Z1MvBIsHixO
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" 9g2HijAlF79TD7XDbcDPA/input-market_overview
+            - output->"Subgraph" ncUDyl1BdnOZdM0ZWE2qm/input-market
+          visualData: -443.32618767724983/1356.2755352285512/357.5615803701892/895//
+        '[EOzSoDXcE2rjvIpJT5B8m]:text "Text"':
+          data:
+            text: Alfred
+          outgoingConnections:
+            - output->"Text" LQvLpslw9ruN3csphzm5y/name
+          visualData: 515.7157766587916/2399.3088129420644/330/939//
         '[G3mV8BmNwORZcIlLjasJe]:subGraph "Subgraph"':
           data:
             graphId: oWwjuAO5vMbnMH1s_payA
@@ -706,6 +1044,20 @@ data:
           outgoingConnections:
             - output->"Object" i8Vpu0xyK-fbH-9w2FNhi/input2
           visualData: -1264.4908132827038/1669.1848183352076/330/799//
+        '[LQvLpslw9ruN3csphzm5y]:text "Text"':
+          data:
+            text: |-
+              * His current wallet status
+              {{current}}
+              ---------
+              * The future predictions for his wallet
+              {{future}}
+              ---------
+              * You will also receive his name
+              {{name}}
+          outgoingConnections:
+            - output->"Chat" VTcb1C2l2RLcgwCW10f5_/prompt
+          visualData: 925.5624384876687/1831.148071497367/330/946//
         '[N2yeIAsTroFp_-Lbi5dtK]:subGraph "Subgraph"':
           data:
             graphId: T9t4JsogNdwQ3bLcnft-c
@@ -714,6 +1066,140 @@ data:
           outgoingConnections:
             - output->"Object" i8Vpu0xyK-fbH-9w2FNhi/input1
           visualData: -1267.096234636724/1451.632135274523/330/797//
+        '[NLGqHBujLYqsLj9TH5RnD]:text "Text"':
+          data:
+            text: >
+              You are an investment advisor. You will receive 3 texts regarding
+              your client:
+
+
+              * His current wallet status
+
+              * The future predictions for his wallet
+
+              * You will also receive his name
+
+
+              You should, output 2 sections:
+
+              How their investment portfolio has fluctuated over the past 30 days; -> His current wallet status
+
+
+              How market events may affect their investment portfolio in the next 30 days; -> The future predictions for his wallet
+
+
+              -----------
+
+              you should extract the core details from:
+
+              * His current wallet status
+
+              * The future predictions for his wallet
+
+              -----------
+
+
+              OUTPUT:
+
+              The text that will be shared with the client should be in letter format, in Portuguese.
+
+
+              You dont need to add the advisor name, or company name. Treat it like an email.
+
+
+              The output should be in .md format
+          outgoingConnections:
+            - output->"Chat" VTcb1C2l2RLcgwCW10f5_/systemPrompt
+          visualData: 1194.5758440842592/1394.1681447475833/330/947//
+        '[OxuO_2nsXcSUwQDUVJVnU]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/wallets/albert_profile.pdf
+          outgoingConnections:
+            - output->"Subgraph" VUvr82Wb5HcZa3H8Hkv8C/input
+          visualData: -882.5720750174448/1016.5442390310948/330/904//
+        '[TEYiZ1AQ8isltfWRGSJls]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output-strategy
+          visualData: 2199.5449799404505/1989.9807236688298/330/954//
+        '[VTcb1C2l2RLcgwCW10f5_]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.2
+            text: ""
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" eb9rKANyVhyb2Eb0BAjvW/value
+          visualData: 1656.770298478357/1900.7210165989975/230/955//
+        '[VUvr82Wb5HcZa3H8Hkv8C]:subGraph "Subgraph"':
+          data:
+            graphId: bT8NWRFqL-2z8zM1W66BD
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" ncUDyl1BdnOZdM0ZWE2qm/input-profile
+          visualData: -433.1761410904095/1168.3837371426814/330/905//
+        '[YNR8UtkAt6w_-K98MRcMa]:text "Text"':
+          data:
+            text: >
+              You are a aggregator, you will receive a letter, and an investment
+              suggestion.
+
+
+              You should add the investment suggestion at the end of the letter (as a third section after 
+
+              ### Previsões para o Futuro
+
+
+              NOTE: DO NOT CHANGE THE STRATEGY TEXT!!!
+
+
+              JUST APPEND IT
+          visualData: 1656.5255953275291/1495.507525047892/330/949//
+        '[b8u719Qx8bUUklj3i9ONl]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/wallets/albert.pdf
+          outgoingConnections:
+            - output->"Subgraph" 4T0gTLVyIgyamkhaqQlIJ/input
+          visualData: -1219.0049408865168/1884.7709509166382/330/822//
+        '[bCyRJhlrOSgYJ9_u5FOeT]:text "Text"':
+          data:
+            text: /Users/paulochade/Documents/projects/enter/data/wallets/xp_research.pdf
+          outgoingConnections:
+            - output->"Subgraph" DuLSWxIxPnKtCdRdCA9Am/input
+          visualData: -894.0885309812402/1259.5421425978723/330/896//
+        '[eb9rKANyVhyb2Eb0BAjvW]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output-letter
+          visualData: 2203.5973634077113/1789.9807236688298/330/952//
         '[i8Vpu0xyK-fbH-9w2FNhi]:object "Object"':
           data:
             jsonTemplate: |-
@@ -730,6 +1216,1596 @@ data:
           outgoingConnections:
             - output->"Subgraph" N2yeIAsTroFp_-Lbi5dtK/input
           visualData: -1712.9359429710414/1427.3382704596534/330/796//
+        '[ncUDyl1BdnOZdM0ZWE2qm]:subGraph "Subgraph"':
+          data:
+            graphId: di7WafynzRIKKGKrqP1HP
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" TEYiZ1AQ8isltfWRGSJls/value
+          visualData: 281.2824553904259/1562.157479527277/330/928//
+    bT8NWRFqL-2z8zM1W66BD:
+      metadata:
+        description: ""
+        id: bT8NWRFqL-2z8zM1W66BD
+        name: getProfile
+      nodes:
+        '[1Xw7NsHgNe2irI4TFg3gS]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: /Users/paulochade/Documents/projects/enter/data/wallets/albert_profile.pdf
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" UMtZI2hOl4OuKGgIAk4eV/input
+          visualData: 462/482/330/875//
+        '[4bB3P2a0QdmItxSMh3pMv]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2000/465/330/876//
+        '[AypC0PB3Q-G5Xl3Mkof5W]:text "Text"':
+          data:
+            text: >-
+              You are going to be given a markdown document describing a user
+              profile.
+
+
+              You should only output his profile. It can be:
+
+              * Conservador
+
+              * Moderado
+
+              * Agressivo
+
+
+              Just output one of these tree words. No explanation
+
+              Follow these instructions carefully
+          outgoingConnections:
+            - output->"Chat" BPulKO6n0VQzz8VYqyfFg/systemPrompt
+          visualData: 983/153/330/873//
+        '[BPulKO6n0VQzz8VYqyfFg]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" 4bB3P2a0QdmItxSMh3pMv/value
+          visualData: 1536/400/230/872//
+        '[UMtZI2hOl4OuKGgIAk4eV]:subGraph "Subgraph"':
+          data:
+            graphId: nm3hdnkJ8S9-UDmx3BG6Z
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Chat" BPulKO6n0VQzz8VYqyfFg/prompt
+          visualData: 946/476/330/2//
+    di7WafynzRIKKGKrqP1HP:
+      metadata:
+        description: ""
+        id: di7WafynzRIKKGKrqP1HP
+        name: makeInvestmentSuggestions
+      nodes:
+        '[0GvNDsnta8k-emI89ZdeI]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3793.258861150668/424.80932848612514/330/null//
+        '[0hX9IPZizV-Yfmd43YcDJ]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.categories
+            usePathInput: false
+          outgoingConnections:
+            - match->"Text" Fwkn58HuRBtkjs9GsFqtP/categories
+          visualData: 2720.7583733303345/1210.0516524877364/280/997//
+        '[1x6NBMCTpvrIYSPUbxsrM]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.1
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" 2tJO3J3d9Z-CQMKj3AQN_/strategy
+          visualData: 4147.079808369027/1713.1520110951096/230/980//
+        '[23olTiKhBGtlmzTkc4UWp]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.1
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" Fwkn58HuRBtkjs9GsFqtP/table
+            - response->"Text" gChYvNtJHra5S3jeKOk2S/money_alloc
+          visualData: 3273.23351992004/1819.1847382433766/230/974//
+        '[2tJO3J3d9Z-CQMKj3AQN_]:text "Text"':
+          data:
+            text: >-
+              * A stretegy that defines if a client should buy/sell some asset
+              class
+
+              {{strategy}}
+
+
+              --------------------------
+
+              * The clients current assets and quantity
+
+
+              {{assets}}
+
+              ----------------------
+
+              * The clients risk profile
+
+
+              {{profile}}
+          outgoingConnections:
+            - output->"Chat" XLiVWZc9u7XMCbJNLPZ92/prompt
+          visualData: 4493.4636363038235/1642.980614590449/330/987//
+        '[4TFBCpi0R4ghegKE3aUFc]:text "Text"':
+          data:
+            text: >-
+              You are a investment expert. You will receive a table with
+              suggested asset allocations made by the quant team, as well as a
+              market analysis made by the economists. You should output a new
+              markdown table of investment suggestions.
+
+
+              You should combine the quant team's algorithim, with the economist analysis.
+
+
+              An example of table input is:
+
+
+              ======= table.example ========
+
+              classe,conservador,moderado,agressivo
+
+              posfixado,64.5,7.5,0
+
+              inflacao,10.5,18.5,14
+
+              prefixado,3,3,2
+
+              renda_fixa_global,6,8,6
+
+              multimercados,11,25,16
+
+              renda_var_br,3,19.5,38
+
+              renda_var_global,0,9,12
+
+              alternativos,2,10,12
+
+              ================================
+
+
+              It suggest, by risk profiles what percentage you should allocate to each asset type.
+
+
+              You need to output a mardown table, with changes (or not) to any allocations, according to the economists report.
+
+
+              **Detail**
+
+              * You should not make big adjustments (limit to 0.5-3)
+
+              * Just output the new table, no comments. It should be a markdown table.
+
+
+              output example:
+
+
+              | classe             | conservador | moderado | agressivo |
+
+              |--------------------|-------------|----------|-----------|
+
+              | posfixado          | 63.0        | 8.0      | 1.0       |
+
+              | inflacao           | 11.0        | 17.5     | 13.5      |
+
+              | prefixado          | 3.5         | 2.5      | 2.0       |
+
+              | renda_fixa_global  | 6.5         | 7.5      | 6.0       |
+
+              | multimercados      | 10.0        | 24.0     | 17.0      |
+
+              | renda_var_br       | 2.5         | 20.0     | 37.5      |
+
+              | renda_var_global   | 0.5         | 8.5      | 12.5      |
+
+              | alternativos       | 3.0         | 11.0     | 10.5      |
+          outgoingConnections:
+            - output->"Chat" mAt43mqWHwrQIFJW1Qd1q/systemPrompt
+          visualData: 836/-55/330/905//
+        '[BV-aWweCPTpT70C8XKuCi]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-profile
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" 2tJO3J3d9Z-CQMKj3AQN_/profile
+            - data->"Text" mOdMiRko_zIMXdahvH6z5/profile
+          visualData: 1326/632/330/916//
+        '[ByKgOiWhOuZeL2TPSWNXy]:text "Text"':
+          data:
+            text: >-
+              You are a invest analist specialist
+
+
+              You will receive:
+
+              * Companies suggestion for wallet allocation
+
+              * How much money a client should put into each asset
+
+              * A strategy for getting to such strategy
+
+
+              You you need to create a markdown text:
+
+              * ouput the suggestion table as markdown
+
+              * Join the output table with how much money he should invest
+
+              * Output a section with the detailed strategy to get to such suggestion
+
+
+              The table in the output should be in the format:
+
+
+              | Classe                | Alocação Moderado | Investimento Moderado |
+
+              |-----------------------|-------------------|-----------------------|
+
+              | Pós-fixado            | 7.5%              | R$ 23,296.11          |
+
+              | Inflação              | 19.0%             | R$ 59,038.34          |
+
+              | Prefixado             | 3.5%              | R$ 10,825.48          |
+
+              | Renda Fixa Global     | 9.0%              | R$ 27,965.53          |
+
+              | Multimercados         | 26.0%             | R$ 80,893.31          |
+
+              | Renda Variável BR     | 19.0%             | R$ 59,038.34          |
+
+              | Renda Variável Global | 9.0%              | R$ 27,965.53          |
+
+              | Alternativos          | 11.0%             | R$ 34,180.10          |
+
+
+              Be brief and formal as an ivestment advisor would
+
+
+              The output should be in Portuguese!!!
+          outgoingConnections:
+            - output->"Chat" UdERqnnJKXTap6lJJydUq/systemPrompt
+          visualData: 2732.872995391563/-200.91386256992337/330/930//
+        '[D9ucNA24vwED4vLlWLfyQ]:text "Text"':
+          data:
+            text: |-
+              Table Input:
+              {{table}}
+
+              ----------------------------------
+
+              Economist Market Input
+              {{market}}
+          outgoingConnections:
+            - output->"Chat" mAt43mqWHwrQIFJW1Qd1q/prompt
+          visualData: 848/446/330/14//
+        '[FGPHzRBGg5WFjQXAy5AOd]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-client_assets
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" 2tJO3J3d9Z-CQMKj3AQN_/assets
+          visualData: 1984.0070318805767/879.6379730494388/330/988//
+        '[Fwkn58HuRBtkjs9GsFqtP]:text "Text"':
+          data:
+            text: |-
+              **Ideal allocation**
+              {{table}}
+
+
+              **Current allocation**
+              -----------------------------
+              {{categories}}
+          outgoingConnections:
+            - output->"Chat" 1x6NBMCTpvrIYSPUbxsrM/prompt
+          visualData: 3659.38797590064/1791.4403392027277/330/978//
+        '[Lfierhj1Bn79eTzTSaH6h]:text "Text"':
+          data:
+            text: >-
+              You are a extractor bot. You will Receive a markdown table with
+              investment allocations for 3 risk profiles, as well as a chosen
+              risk profile. You will extract only the data from this chosem risk
+              profile.
+
+              ---------------------
+
+
+              input example:
+
+
+              table:
+
+              | classe             | conservador | moderado | agressivo |
+
+              |--------------------|-------------|----------|-----------|
+
+              | posfixado          | 63.0        | 8.0      | 1.0       |
+
+              | inflacao           | 11.0        | 17.5     | 13.5      |
+
+              | prefixado          | 3.5         | 2.5      | 2.0       |
+
+              | renda_fixa_global  | 6.5         | 7.5      | 6.0       |
+
+              | multimercados      | 10.0        | 24.0     | 17.0      |
+
+              | renda_var_br       | 2.5         | 20.0     | 37.5      |
+
+              | renda_var_global   | 0.5         | 8.5      | 12.5      |
+
+              | alternativos       | 3.0         | 11.0     | 10.5      |
+
+
+              profile: conservador
+
+
+              output example:
+
+
+              | classe             | conservador |
+
+              |--------------------|-------------|
+
+              | posfixado          | 63.0        |
+
+              | inflacao           | 11.0        |
+
+              | prefixado          | 3.5         |
+
+              | renda_fixa_global  | 6.5         |
+
+              | multimercados      | 10.0        |
+
+              | renda_var_br       | 2.5         |
+
+              | renda_var_global   | 0.5         |
+
+              | alternativos       | 3.0         |
+          outgoingConnections:
+            - output->"Chat" yenpZJxqk3NFCF8mh12de/systemPrompt
+          visualData: 1724.3028609082312/-131/330/920//
+        '[N0zjdHraRsYbfHzgxdBlm]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $.total_sum
+            usePathInput: false
+          outgoingConnections:
+            - match->"Text" ef-kLFhUGjk_rV-JGpuvF/total_assets
+          visualData: 2381.194341598808/1827.7017903457388/280/995//
+        '[QNBVAHL0tknD0pZWQHWCy]:text "Text"':
+          data:
+            text: >-
+              You are a investment analist, you will receive two inputs:
+
+              * Table that dictates how much (in percentage) should be allocated into each asset type
+
+              * An object describing the client total assets (invested)
+
+
+              You should output the amount to be invested into each type
+
+
+              ----- table.example ------
+
+              | classe             | conservador |
+
+              |--------------------|-------------|
+
+              | posfixado          | 63.0        |
+
+              | inflacao           | 11.0        |
+
+              | prefixado          | 3.5         |
+
+              | renda_fixa_global  | 6.5         |
+
+              | multimercados      | 10.0        |
+
+              | renda_var_br       | 2.5         |
+
+              | renda_var_global   | 0.5         |
+
+              | alternativos       | 3.0         |
+
+              ------------------------------
+
+
+              total assets = 100000
+
+
+              output for the example:
+
+
+              | classe             | conservador |
+
+              |--------------------|-------------|
+
+              | posfixado          | 63000        |
+
+              | inflacao           | 11000       |
+
+              | prefixado          | 3500         |
+
+              | renda_fixa_global  | 6500         |
+
+              | multimercados      | 10000       |
+
+              | renda_var_br       | 2500         |
+
+              | renda_var_global   | 500         |
+
+              | alternativos       | 3000         |
+
+
+              You should just output the table and nothing more
+          outgoingConnections:
+            - output->"Chat" 23olTiKhBGtlmzTkc4UWp/systemPrompt
+          visualData: 2824.503807745868/1490.4122012562507/330/973//
+        '[R9l3_1YRkyrc4QEtO_RrV]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-quant_alloc
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" D9ucNA24vwED4vLlWLfyQ/table
+          visualData: 391/395/330/8//
+        '[UdERqnnJKXTap6lJJydUq]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" 0GvNDsnta8k-emI89ZdeI/value
+          visualData: 3290.1328347544563/326.0947283704128/230/936//
+        '[XLiVWZc9u7XMCbJNLPZ92]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.1
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" gChYvNtJHra5S3jeKOk2S/strategy
+          visualData: 4864.6858848012025/1681.9613138550922/230/984//
+        '[ef-kLFhUGjk_rV-JGpuvF]:text "Text"':
+          data:
+            text: |-
+              ----- table.oficial ------
+              {{table}}
+              --------------------------
+
+              total assets = {{total_assets}}
+          outgoingConnections:
+            - output->"Chat" 23olTiKhBGtlmzTkc4UWp/prompt
+          visualData: 2839.9856720081925/1889.7637008333588/330/972//
+        '[gChYvNtJHra5S3jeKOk2S]:text "Text"':
+          data:
+            text: |-
+              * Companies suggestion for wallet allocation
+              {{suggestion}}
+
+              ------------
+              * How much money a client should put into each asset
+
+              {{money_alloc}}
+              ------------
+
+
+              * A strategy for getting to such strategy
+              {{strategy}}
+          outgoingConnections:
+            - output->"Chat" UdERqnnJKXTap6lJJydUq/prompt
+          visualData: 2833.588047716155/495.73894453662353/330/991//
+        '[mAt43mqWHwrQIFJW1Qd1q]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.4
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" mOdMiRko_zIMXdahvH6z5/table
+          visualData: 1381/323/230/906//
+        '[mOdMiRko_zIMXdahvH6z5]:text "Text"':
+          data:
+            text: |-
+              table:
+              {{table}}
+
+              profile: {{profile}}
+          outgoingConnections:
+            - output->"Chat" yenpZJxqk3NFCF8mh12de/prompt
+          visualData: 1725.3135008722022/382.9925628270758/330/922//
+        '[pESCwLH1oea6ktIBqMbfk]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-market
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" D9ucNA24vwED4vLlWLfyQ/market
+          visualData: 395/587/330/3//
+        '[pwOA-v3YiEml1guXBsacy]:text "Text"':
+          data:
+            text: >-
+              You are a trader mathematician, you will receive two inputs:
+
+              * A stretegy that defines if a client should buy/sell some asset class
+
+              * The clients current assets and quantity
+
+              * The clients risk profile
+
+
+              You should do the following:
+
+              * Output a text saying which asset types a client should buy
+
+              * If he should sell, specify which assets to sell. (and how much of each assets)
+
+              - in the case of selling assets, consider his risk profile.
+
+
+              Beware of the risk for each profile:
+
+              0-10: conservador
+
+              0-25: moderado
+
+              0-100: arriscado
+
+
+              prioritize selling assets that do not suit his risk profile.
+
+
+              e.g. moderado sell above 25, than above 20, etc.
+
+
+              input:
+
+              ------ A stretegy that defines if a client should buy/sell some asset class
+
+              type,action,amount
+
+              posfixado,Buy,63000.00
+
+              inflacao,Sell,19000.00
+
+              prefixado,Buy,3500.00
+
+              renda_fixa_global,Buy,6500.00
+
+              multimercados,Sell,110084.57
+
+              renda_var_br,Sell,51009.82
+
+              renda_var_global,Buy,500.00
+
+              alternativos,Buy,3000.00
+
+              fundos,Sell,107133.76
+
+              -----------------------------------
+
+
+              ------ The clients current assets and quantity
+
+              type,asset,amt,alloc_perc,risco
+
+              renda_var_br,lren3,27812.04,8.91,0
+
+              fundos,riza_lotus_plus_advisory_fic_firf_ref_di_cp,96178.73,30.81,10
+
+              multimercados,brave_i_fic_fim_cp,72567.43,23.24,13
+
+              fundos,trend_investback_fic_firf_simples,305.44,0.10,1
+
+              multimercados,truxt_long_bias_advisory_fic_fim,12522.05,4.01,27
+
+              fundos,stk_long_biased_fic_fia,9745.97,3.12,31
+
+              fundos,constellation_institucional_advisory_fic_fia,8475.02,2.71,42
+
+              multimercados,ibiuna_hedge_st_advisory_fic_fim,11601.02,3.72,13
+
+              inflacao,cdb_banco_c6_consignado_s.a._-_set/2024,30000.00,12.97,N/A
+
+              -----------------------------------
+
+
+              Detail: renda_var_br has no risk (it cannot be defined), assume high risk, sell the ones which I have a smaller ammount
+
+
+              ------ The clients profile
+
+              Moderado
+
+              -----------------------------------
+
+
+
+              output in the following format:
+
+              ---------------------
+
+              e.g. buy 63k amount of posfixado
+
+              sell 20k of lren3
+
+              ---------------------
+
+
+              output for the example:
+
+
+              buy 63000 of posfixado  
+
+              sell 19000 of cdb_banco_c6_consignado_s.a._-_set/2024  
+
+              buy 3500 of prefixado  
+
+              buy 6500 of renda_fixa_global  
+
+              sell 12522.05 of truxt_long_bias_advisory_fic_fim  
+
+              sell 72567.43 of brave_i_fic_fim_cp  
+
+              sell 11601.02 of ibiuna_hedge_st_advisory_fic_fim  
+
+              sell 27812.04 of lren3  
+
+              buy 500 of renda_var_global  
+
+              buy 3000 of alternativos  
+
+              sell 9745.97 of stk_long_biased_fic_fia  
+
+              sell 8475.02 of constellation_institucional_advisory_fic_fia  
+
+              sell 88912.77 of riza_lotus_plus_advisory_fic_firf_ref_di_cp
+          outgoingConnections:
+            - output->"Chat" XLiVWZc9u7XMCbJNLPZ92/systemPrompt
+          visualData: 4471.089811633898/1274.8756978806084/330/990//
+        '[reCixBQcG-AJOrPlTRVuW]:graphInput "Graph Input"':
+          data:
+            dataType: object
+            id: input-client_performance
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Extract Object Path" 0hX9IPZizV-Yfmd43YcDJ/object
+            - data->"Extract Object Path" N0zjdHraRsYbfHzgxdBlm/object
+          visualData: 1926.047897834102/1245.754683601047/330/999//
+        '[ulg7xeBS5ebfJa7zDt1H_]:text "Text"':
+          data:
+            text: >-
+              You are a trader mathematician, you will receive two inputs:
+
+              * How much a client should allocate to each asset
+
+              * How much is currently allocated
+
+
+              You should output a labelled csv table, indicating asset type, if he should buy or sell, and the amount that should be traded.
+
+
+              example:
+
+
+              **Ideal allocation**
+
+
+              | classe             | conservador |
+
+              |--------------------|-------------|
+
+              | posfixado          | 63000        |
+
+              | inflacao           | 11000       |
+
+              | prefixado          | 3500         |
+
+              | renda_fixa_global  | 6500         |
+
+              | multimercados      | 10000       |
+
+              | renda_var_br       | 2500         |
+
+              | renda_var_global   | 500         |
+
+              | alternativos       | 3000         |
+
+
+              **Current allocation**
+
+              -----------------------------
+
+              "categories": [
+                  {
+                    "type": "renda_var_br",
+                    "value": 53509.82,
+                    "value_vs_cdi": 1.07
+                  },
+                  {
+                    "type": "fundos",
+                    "value": 107133.76,
+                    "value_vs_cdi": 1.13
+                  },
+                  {
+                    "type": "multimercados",
+                    "value": 120084.57,
+                    "value_vs_cdi": 1.5
+                  },
+                  {
+                    "type": "inflacao",
+                    "value": 30000,
+                    "value_vs_cdi": 36144.58
+                  }
+                ],
+                -----------------------------
+              The output should be:
+
+              type,action,amount
+
+              posfixado,Buy,63000.00
+
+              inflacao,Sell,19000.00
+
+              prefixado,Buy,3500.00
+
+              renda_fixa_global,Buy,6500.00
+
+              multimercados,Sell,110084.57
+
+              renda_var_br,Sell,51009.82
+
+              renda_var_global,Buy,500.00
+
+              alternativos,Buy,3000.00
+
+              fundos,Sell,107133.76
+
+
+              JUST OUTPUT THE TABLE, WITHOUT ANY EXPLANATION OR TEXT
+          outgoingConnections:
+            - output->"Chat" 1x6NBMCTpvrIYSPUbxsrM/systemPrompt
+          visualData: 3649.90968609066/1409.0092719085535/330/979//
+        '[yenpZJxqk3NFCF8mh12de]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.2
+            text: ""
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" ef-kLFhUGjk_rV-JGpuvF/table
+            - response->"Text" gChYvNtJHra5S3jeKOk2S/suggestion
+          visualData: 2216.4612127398555/163.95537696245484/230/921//
+    jLnFcrtCg8Z1MvBIsHixO:
+      metadata:
+        description: ""
+        id: jLnFcrtCg8Z1MvBIsHixO
+        name: getMaketOverview
+      nodes:
+        '[27yMm3XfJC-3EJzyHA72G]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input1
+          visualData: 1982.8105527128205/-1056.2421249830247/330/38//
+        '[2swTpwhmaKPkqkrpBm7W-]:text "Text"':
+          data:
+            text: |-
+              {{input1}}
+              -----------------------------------------------
+
+              {{input2}}
+              -----------------------------------------------
+
+              {{input3}}
+              -----------------------------------------------
+
+              {{input4}}
+              -----------------------------------------------
+
+              {{input5}}
+              -----------------------------------------------
+
+              {{input6}}
+              -----------------------------------------------
+
+              {{input7}}
+              -----------------------------------------------
+
+              {{input8}}
+              -----------------------------------------------
+
+              {{input9}}
+              -----------------------------------------------
+          outgoingConnections:
+            - output->"Graph Output" OTHxiFxH8-jRkLEEk3L4R/value
+          visualData: 3124.5439629671623/307.400530286715/330/108//
+        '[3aiH2bdn8AbyngByCFUcY]:text "Text"':
+          data:
+            text: >-
+              "Renda Variável Global Asset" refers to investments in assets
+              whose returns are not fixed and can fluctuate, with a focus on
+              investments in global markets, such as stocks, bonds, or funds,
+              that are not limited to a single country. 
+
+              Here's a more detailed explanation:
+
+              Renda Variável (Variable Income):
+
+              This is a category of investments where the return is not predetermined and can fluctuate based on market conditions. 
+
+              Global Asset:
+
+              This refers to investments that are not limited to a specific country or region, but instead encompass a wider range of international markets. 
+
+              Examples of Global Asset Investments:
+
+              Stocks: Shares in companies that operate in multiple countries. 
+
+              Bonds: Debt securities issued by governments or corporations in different countries. 
+
+              Funds: Investment funds that hold a mix of global assets. 
+
+              Characteristics of Renda Variável Global Asset Investments:
+
+              Higher Risk: Compared to fixed income investments, these investments carry a higher risk of loss. 
+
+              Higher Potential Return: However, they also offer the potential for higher returns. 
+
+              Diversification: Investing in global assets can help diversify an investment portfolio, reducing reliance on a single market or country. 
+
+              Examples of Global Asset Investment Strategies:
+
+              Global Dynamic Fund: A fund that combines various investment strategies to generate returns from global markets, with the goal of delivering consistent performance. 
+
+              Long & Short: A strategy that aims to profit from the difference in performance between two stocks, regardless of the direction of the main index. 
+
+              Macro: A strategy that invests in different assets in Brazil and the world, with a focus on short and long-term horizons. 
+
+              Systematic: A strategy that uses algorithms and mathematical models to predict the behavior of assets. 
+
+
+              IMPORTANT: Focus on details such as FED, Exchange rate, global markets
+          outgoingConnections:
+            - output->"Subgraph" B86vsN1iDDXauAMMyB_bq/input-asset_desc
+          visualData: 1475.2446011264324/2141.2665826262355/330/95//
+        '[7-lQwBobyarOWKzIjOjh2]:text "Text"':
+          data:
+            text: >-
+              A "pós-fixado asset" refers to an investment where the return is
+              linked to a specific economic indicator, like the CDI or IPCA,
+              meaning the yield fluctuates based on the performance of that
+              indicator. 
+
+              Here's a more detailed explanation:
+
+              Definition:
+
+              "Pós-fixado" translates to "post-fixed" or "indexed to a variable" in Portuguese, indicating that the investment's return isn't predetermined but rather tied to a benchmark. 
+
+              How it works:
+
+              The investment's yield is calculated based on the performance of a specific economic index, such as the CDI (Certificado de Depósito Interbancário) or IPCA (Índice de Preços ao Consumidor Amplo). 
+
+              Examples:
+
+              CDBs (Certificados de Depósito Bancário) pós-fixados: These are certificates issued by banks, and their returns are linked to the CDI. 
+
+              LCA (Letra de Crédito do Agronegócio) pós-fixada: These are credit instruments issued by financial institutions to finance agricultural activities, with returns linked to the CDI or IPCA. 
+
+              Tesouro Selic and Tesouro IPCA+: These are government bonds where the yield is linked to the Selic rate (the benchmark interest rate) or the IPCA, respectively. 
+
+              Advantages:
+
+              Potential for higher returns: If the index chosen performs well, the investment can offer higher returns. 
+
+              Protection against inflation: Investments linked to the IPCA can help protect against inflation, as the returns are adjusted to reflect the inflation rate. 
+
+              Disadvantages:
+
+              Uncertainty in returns: The returns are not fixed, and the investor doesn't know the exact amount they will receive until the investment matures. 
+
+              Risk of lower returns: If the index performs poorly, the investment's returns may be lower than expected. 
+
+              Who it's for:
+
+              Investors seeking to benefit from rising interest rates: If the investor believes that interest rates will increase, they may choose a pós-fixado investment linked to the CDI. 
+
+              Investors seeking protection against inflation: Those seeking to protect their investments from the effects of inflation may choose a pós-fixado investment linked to the IPCA. 
+          outgoingConnections:
+            - output->"Subgraph" 27yMm3XfJC-3EJzyHA72G/input-asset_desc
+          visualData: 1453.481277538269/-1434.0864906276183/330/54//
+        '[74f89nY1t-jCcmvDktBhk]:text "Text"':
+          data:
+            text: Renda Fixa Inflação
+          outgoingConnections:
+            - output->"Subgraph" i2SDfeNGHvW93-MezOXoi/input-asset
+          visualData: 1465.6244208991689/-563.0776205036941/330/42//
+        '[9ksBOtq3dj_ofWvbfPrz7]:text "Text"':
+          data:
+            text: Renda Fixa Pós Fixado
+          outgoingConnections:
+            - output->"Subgraph" 27yMm3XfJC-3EJzyHA72G/input-asset
+          visualData: 1458.0560550676262/-1065.0471045236363/330/53//
+        '[AuEtNmET3ZkfzvsqjxqJj]:text "Text"':
+          data:
+            text: Renda Variável Global
+          outgoingConnections:
+            - output->"Subgraph" B86vsN1iDDXauAMMyB_bq/input-asset
+          visualData: 1475.8518850471598/2502.021812544343/330/100//
+        '[B86vsN1iDDXauAMMyB_bq]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input8
+          visualData: 1999.4406035326524/2358.8785646471756/330/94//
+        '[Bd-9TvWs31QCjNzbIe8J5]:text "Text"':
+          data:
+            text: >-
+              Um ativo de renda fixa com inflação, ou "renda fixa inflação
+              asset", é um investimento que busca proteger o capital do
+              investidor contra a inflação, ou seja, a desvalorização do
+              dinheiro ao longo do tempo. 
+
+              Como funciona:
+
+              Atrelamento à inflação:
+
+              Esses ativos são projetados para que o rendimento acompanhe a variação de um índice de preços, como o IPCA (Índice de Preços ao Consumidor Amplo), que mede a inflação no Brasil. 
+
+              Exemplos:
+
+              Um exemplo comum é o Tesouro IPCA+, um título público emitido pelo governo brasileiro cujo rendimento é composto pela inflação (medida pelo IPCA) mais uma taxa de juros fixa. 
+
+              Fundos de Renda Fixa com Inflação:
+
+              Existem também fundos de investimento de renda fixa que investem em ativos atrelados à inflação, como fundos que buscam acompanhar o IMA-B (Índice de Mercado ANBIMA - B) ou fundos que investem em títulos públicos indexados ao IPCA. 
+
+              Proteção contra a desvalorização:
+
+              Ao investir em ativos de renda fixa com inflação, o investidor busca garantir que o seu dinheiro cresça acima da inflação, protegendo-o da perda de poder de compra. 
+
+              Exemplos de Fundos:
+
+              Santander Prev Inflação Ativo Super, Inter Inflação Curta, Kinea IPCA Absoluto. 
+
+              Benefícios:
+
+              Proteção contra a inflação:
+
+              O principal benefício é a proteção do capital contra a desvalorização causada pela inflação. 
+
+              Rendimento previsível:
+
+              Em geral, o rendimento desses ativos é mais previsível do que o de outros tipos de investimentos, como ações. 
+
+              Diversificação:
+
+              A renda fixa com inflação pode ser uma boa alternativa para diversificar a carteira de investimentos. 
+
+              Riscos:
+
+              Risco de mercado:
+
+              Os fundos de renda fixa com inflação podem ter riscos de mercado, como oscilações de preço dos títulos em carteira. 
+
+              Risco de crédito:
+
+              Há também o risco de crédito, que é a possibilidade de o emissor do título não conseguir pagar o valor no vencimento. 
+
+              Liquidez:
+
+              A liquidez (facilidade de resgate) pode variar dependendo do tipo de investimento. 
+          outgoingConnections:
+            - output->"Subgraph" i2SDfeNGHvW93-MezOXoi/input-asset_desc
+          visualData: 1462.9040051582335/-922.7936114924817/330/52//
+        '[Hrd7t8harp9d_njwOyldN]:text "Text"':
+          data:
+            text: Renda Variável
+          outgoingConnections:
+            - output->"Subgraph" nGU3qAikaJ98KTtkeK1Rq/input-asset
+          visualData: 1470.4864513018626/1977.0031897438594/330/87//
+        '[Iuu5dG_MYDoAyk7zDGkjq]:text "Text"':
+          data:
+            text: >-
+              Alternativos asset" refers to alternative investments, which are
+              assets that fall outside of the traditional categories of stocks,
+              bonds, and cash, such as real estate, private equity, or
+              commodities. 
+
+              Here's a more detailed explanation:
+
+              Definition:
+
+              Alternative assets, also known as alternative investments, are investments that are not classified as equities (stocks), bonds, or cash. 
+
+              Examples:
+
+              These investments can include real estate, private equity, venture capital, commodities, hedge funds, and even collectibles like art or rare items. 
+
+              Purpose:
+
+              Investors often turn to alternative assets to diversify their portfolios, potentially achieve higher returns, and/or hedge against inflation. 
+
+              Characteristics:
+
+              Lower Correlation: Alternative assets often have a low correlation to traditional asset classes, meaning their performance is less likely to move in the same direction as stocks and bonds. 
+
+              Potential for Higher Returns: Due to their nature and often higher risk profile, alternative investments can offer the potential for higher returns than traditional investments. 
+
+              Illiquidity: Some alternative assets, particularly those in the private markets (like private equity), can be less liquid than traditional investments, meaning they may take longer to sell or convert to cash. 
+
+              Higher Minimums: Alternative investments often require larger minimum investment amounts compared to traditional investments. 
+
+              Types of Alternative Investments:
+
+              Private Equity: Investments in private companies, often through funds that acquire and manage these companies. 
+
+              Real Estate: Investing in physical properties, either directly or through real estate investment trusts (REITs). 
+
+              Commodities: Investing in raw materials like gold, oil, or agricultural products. 
+
+              Hedge Funds: Funds that use a variety of strategies to generate returns, often with a focus on exploiting market inefficiencies. 
+
+              Venture Capital: Funding for early-stage, high-growth companies. 
+
+              Benefits:
+
+              Diversification: Alternative investments can help diversify a portfolio, reducing overall risk. 
+
+              Inflation Hedge: Some alternative assets, like real estate and commodities, can act as a hedge against inflation. 
+
+              Potential for Higher Returns: Alternative investments can offer the potential for higher returns than traditional investments. 
+
+              Risks:
+
+              Illiquidity: Some alternative investments are difficult to sell quickly. 
+
+              Complexity: Alternative investments can be more complex than traditional investments, requiring specialized knowledge. 
+
+              Higher Minimums: Alternative investments often require larger minimum investment amounts compared to traditional investments. 
+
+              Potential for Loss: As with any investment, there is a risk of loss with alternative investments. 
+          outgoingConnections:
+            - output->"Subgraph" zYqqxImjXmc-kkDoFl-oa/input-asset_desc
+          visualData: 1453.58883429543/2688.996982554269/330/85//
+        '[KnLW_O2icdcJDeNakQS2c]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input3
+          visualData: 2025.0705130439392/-264.5626228665958/330/55//
+        '[OTHxiFxH8-jRkLEEk3L4R]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3686.3053751227776/536.9481653177374/330/111//
+        '[OjW6VzxRL_MuXMdFgBw0I]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input6
+          visualData: 1959.7864845725549/1394.1456568511815/330/75//
+        '[PN_FCZ9Cr5-5TRdNQ2Sai]:text "Text"':
+          data:
+            text: >-
+              In the context of Brazilian investments, a "Multimercado" asset,
+              or fund, is a type of investment fund that allows for
+              diversification across various asset classes and markets,
+              including fixed income, variable income, currency, commodities,
+              and international markets. 
+
+              Here's a more detailed explanation:
+
+              Flexibility and Diversification:
+
+              Multimercado funds are known for their flexibility, allowing managers to invest in a wide range of assets and markets, adapting to changing market conditions. 
+
+              Asset Classes:
+
+              These funds typically invest in fixed income (like government bonds), variable income (like stocks), currencies, commodities (like gold or oil), and even international markets. 
+
+              Risk Mitigation:
+
+              By diversifying across different asset classes and markets, Multimercado funds aim to mitigate risks and potentially achieve better returns compared to investing in a single asset class or market. 
+
+              Examples:
+
+              Some examples of Multimercado funds include the BB Multimercado BRL BlackRock Multi-Asset ESG IE and the Valência Global Multimercado. 
+
+              Macro Focus:
+
+              Some Multimercado funds focus on macro analysis, meaning they make investment decisions based on macroeconomic factors and trends. 
+
+              Long & Short Strategies:
+
+              Some Multimercado funds employ long & short strategies, meaning they can invest in assets that are expected to go up in price (long) and also invest in assets that are expected to go down in price (short). 
+
+              Active Management:
+
+              Multimercado funds are typically actively managed, meaning that the fund managers have the discretion to adjust the portfolio based on their analysis of the market. 
+          outgoingConnections:
+            - output->"Subgraph" o990E_VZ44pfaYyNasvYy/input-asset_desc
+          visualData: 1474.0652988897004/608.1450901561161/330/61//
+        '[TBfmiiJTWrnUUst-eSKja]:text "Text"':
+          data:
+            text: Alternativos
+          outgoingConnections:
+            - output->"Subgraph" zYqqxImjXmc-kkDoFl-oa/input-asset
+          visualData: 1461.8875577847525/3055.2384118845675/330/101//
+        '[TF-E4B90IRMaloOGZ8ql_]:subGraph "Subgraph"':
+          data:
+            graphId: nm3hdnkJ8S9-UDmx3BG6Z
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Subgraph" 27yMm3XfJC-3EJzyHA72G/input-text
+            - output->"Subgraph" B86vsN1iDDXauAMMyB_bq/input-text
+            - output->"Subgraph" KnLW_O2icdcJDeNakQS2c/input-text
+            - output->"Subgraph" OjW6VzxRL_MuXMdFgBw0I/input-text
+            - output->"Subgraph" i2SDfeNGHvW93-MezOXoi/input-text
+            - output->"Subgraph" nGU3qAikaJ98KTtkeK1Rq/input-text
+            - output->"Subgraph" o990E_VZ44pfaYyNasvYy/input-text
+            - output->"Subgraph" qSyn4j8yknvv3NNJP1p49/input-text
+            - output->"Subgraph" zYqqxImjXmc-kkDoFl-oa/input-text
+          visualData: 872.4041753742009/1062.5749477547943/330/105//
+        '[YsV9cNKd9Qy1Sr4B-Jlpk]:text "Text"':
+          data:
+            text: Renda Fixa Global
+          outgoingConnections:
+            - output->"Subgraph" qSyn4j8yknvv3NNJP1p49/input-asset
+          visualData: 1479.4593864149945/467.8988144984718/330/58//
+        '[ZLt3M5NW03PX7q7SNK-CY]:text "Text"':
+          data:
+            text: fundo de investimento
+          outgoingConnections:
+            - output->"Subgraph" OjW6VzxRL_MuXMdFgBw0I/input-asset
+          visualData: 1474.0652988897004/1455.0168316272766/330/73//
+        '[_0qva23PoHg6ROEXubozT]:text "Text"':
+          data:
+            text: >-
+              "Renda Variável" assets, or variable income investments, are
+              investments where the return is not fixed and can fluctuate based
+              on market conditions, unlike fixed income investments where the
+              return is known in advance. 
+
+              Here's a more detailed explanation:
+
+              Definition:
+
+              Renda Variável refers to investments where the potential return is not predetermined and can vary based on market performance, company performance, or other factors. 
+
+              Examples:
+
+              Common examples of Renda Variável assets include stocks (ações), bonds (títulos), mutual funds (fundos de investimento), and real estate investment trusts (FIIs). 
+
+              Risk and Reward:
+
+              Renda Variável investments generally offer the potential for higher returns compared to fixed income investments, but they also come with a higher risk of losing money. 
+
+              Factors Affecting Returns:
+
+              The returns of Renda Variável investments can be influenced by various factors, including:
+
+              Market conditions: Economic trends, political events, and investor sentiment. 
+
+              Company performance: The financial health and growth prospects of the companies in which you invest. 
+
+              Interest rates: Changes in interest rates can impact the value of certain investments. 
+
+              Inflation: Inflation can erode the real value of investments. 
+
+              Diversification:
+
+              It's important to diversify your investments to reduce risk. Renda Variável investments can be a good way to diversify a portfolio, but it's essential to understand the risks involved and to invest in a way that aligns with your risk tolerance and investment goals. 
+
+              Long-Term Perspective:
+
+              Renda Variável investments are generally considered to be more suitable for long-term investors who are comfortable with the potential for volatility. 
+          outgoingConnections:
+            - output->"Subgraph" nGU3qAikaJ98KTtkeK1Rq/input-asset_desc
+          visualData: 1470.4692405395044/1629.425661611783/330/78//
+        '[eMPzgCSdFiCbfO1IHFALU]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: /Users/paulochade/Documents/projects/enter/data/wallets/xp_research.pdf
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" TF-E4B90IRMaloOGZ8ql_/input
+          visualData: 266.8452413326552/1072.538057170541/330/104//
+        '[eovyol0pIKz0AsLewppzU]:text "Text"':
+          data:
+            text: >-
+              In the context of Brazilian finance, "fundo de investimento"
+              translates to "investment fund" or "mutual fund" in English, and
+              "asset" in this context refers to the type of assets the fund
+              invests in. 
+
+              Here's a more detailed explanation:
+
+              "Fundo de Investimento" (Investment Fund/Mutual Fund):
+
+              This is a general term for a pool of money collected from multiple investors and managed by a professional investment manager. 
+
+              "Asset":
+
+              This refers to the type of investments the fund holds, which can include stocks, bonds, real estate, or other assets. 
+
+              Example:
+
+              A "fundo de investimento em ações" (stock investment fund) would invest primarily in stocks, while a "fundo de investimento imobiliário" (real estate investment fund) would invest in real estate assets. 
+
+              FIDC:
+
+              A specific type of investment fund in Brazil is "Fundo de Investimento em Direitos Creditórios" (FIDC), which translates to "Receivables Investment Fund". FIDCs are backed by receivables, such as car loans, credit card debt, and trade assets. 
+
+              Other Investment Funds:
+
+              There are various other types of investment funds in Brazil, each with its own investment focus and characteristics
+          outgoingConnections:
+            - output->"Subgraph" OjW6VzxRL_MuXMdFgBw0I/input-asset_desc
+          visualData: 1474.0652988897007/1133.1696092847335/330/72//
+        '[i2SDfeNGHvW93-MezOXoi]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input2
+          visualData: 2016.3222879550062/-622.8810828165598/330/37//
+        '[nGU3qAikaJ98KTtkeK1Rq]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input7
+          visualData: 1954.156387241031/1862.513629653812/330/93//
+        '[nViRTynJHnXp9y76F9gce]:text "Text"':
+          data:
+            text: Renda Fixa Prefixado
+          outgoingConnections:
+            - output->"Subgraph" KnLW_O2icdcJDeNakQS2c/input-asset
+          visualData: 1470.1898403680666/-66.90211765226177/330/51//
+        '[o990E_VZ44pfaYyNasvYy]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input5
+          visualData: 1988.6260453531397/885.5359104561062/330/70//
+        '[qSyn4j8yknvv3NNJP1p49]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input4
+          visualData: 1972.733080069941/343.18324274209425/330/71//
+        '[qbsB8mjEcb7HfpJtIkG5D]:text "Text"':
+          data:
+            text: >
+              A "renda fixa prefixada" asset is a fixed-income investment where
+              the interest rate (or yield) is known and fixed at the time of
+              purchase, meaning you know exactly how much you'll earn over the
+              investment period. 
+
+              Here's a more detailed breakdown:
+
+              Fixed Interest Rate:
+
+              Unlike investments with rates that fluctuate (post-fixed), prefixados have a predetermined interest rate, providing certainty about the return. 
+
+              Examples:
+
+              Common examples include Certificados de Depósito Bancário (CDBs) and Tesouro Prefixado (a type of Brazilian government bond). 
+
+              How it works:
+
+              When you invest in a prefixado asset, you essentially lend money to the issuer (e.g., a bank or the government) for a specific period, and they agree to pay you a fixed interest rate on that loan. 
+
+              Benefits:
+
+              Predictability: You know the exact return you'll receive, making it easier to plan your finances. 
+
+              Suitable for: Individuals seeking a stable and predictable investment, especially those with a medium to long-term horizon. 
+
+              Risks:
+
+              Interest Rate Fluctuations: If interest rates rise after you invest, the value of your prefixado asset might decline. 
+
+              Credit Risk: There's a risk that the issuer might default on the payment. 
+
+              Where to find them:
+
+              You can typically find prefixado assets through banks, financial institutions, and the government's "Tesouro Direto" program. 
+          outgoingConnections:
+            - output->"Subgraph" KnLW_O2icdcJDeNakQS2c/input-asset_desc
+          visualData: 1465.7657390460954/-429.89796115206207/330/43//
+        '[rYjxYvGaZw4buKV1UWA94]:text "Text"':
+          data:
+            text: Multimercados
+          outgoingConnections:
+            - output->"Subgraph" o990E_VZ44pfaYyNasvYy/input-asset
+          visualData: 1474.0652988897004/971.3469835259132/330/69//
+        '[sLw-mjFzcbiVyNh1owifJ]:text "Text"':
+          data:
+            text: >-
+              A "renda fixa global asset" (global fixed income asset) refers to
+              a type of investment fund that focuses on fixed-income securities
+              (like bonds) from various countries and markets worldwide, aiming
+              for returns above the CDI (Brazilian interbank deposit rate) over
+              the long term. 
+
+              Here's a more detailed explanation: 
+
+              What it is:
+
+              It's a fund that invests in a diversified portfolio of fixed-income assets, including government bonds, corporate bonds, and other debt instruments from different countries.
+
+              Investment Strategy:
+
+              The fund's managers actively manage the portfolio, seeking to identify opportunities in different markets and currencies, aiming to generate returns that outperform the CDI.
+
+              Global Exposure:
+
+              Unlike traditional fixed-income funds that focus on Brazilian assets, global fixed income funds offer exposure to international markets, potentially diversifying risk and capturing opportunities in different economic environments.
+
+              Types of Assets:
+
+              These funds can invest in various types of fixed-income securities, including:
+
+              Investment Grade: Bonds issued by governments or companies with high credit ratings.
+
+              High Grade: Bonds issued by companies with strong credit ratings.
+
+              High Yield: Bonds issued by companies with lower credit ratings, potentially offering higher returns but also carrying higher risk.
+
+              Examples:
+
+              Santander Asset Management offers a "Renda Fixa Global" fund that invests in fixed-income assets from local and international markets.
+
+              Objective:
+
+              The primary goal is to achieve a return above the CDI (Brazilian interbank deposit rate) in the long term, even in challenging market conditions.
+
+              Key Considerations:
+
+              Risk:
+
+              While fixed-income assets are generally considered less risky than equities, global fixed-income funds can be subject to currency fluctuations and economic risks in different countries.
+
+              Currency Risk:
+
+              Investing in foreign currencies can expose investors to the risk of exchange rate fluctuations, which can impact the overall return of the investment.
+
+              Diversification:
+
+              Global fixed-income funds offer diversification benefits by investing in a wide range of assets and markets, potentially reducing overall portfolio risk. 
+          outgoingConnections:
+            - output->"Subgraph" qSyn4j8yknvv3NNJP1p49/input-asset_desc
+          visualData: 1474.0652988897007/97.50480442828275/330/57//
+        '[zYqqxImjXmc-kkDoFl-oa]:subGraph "Subgraph"':
+          data:
+            graphId: 16wOUesH7bJffpp6jaXP2
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" 2swTpwhmaKPkqkrpBm7W-/input9
+          visualData: 1954.4669823324916/2908.5563972739064/330/102//
     nm3hdnkJ8S9-UDmx3BG6Z:
       metadata:
         description: ""
@@ -797,7 +2873,7 @@ data:
       metadata:
         description: ""
         id: oWwjuAO5vMbnMH1s_payA
-        name: getDelta
+        name: getCatDelta
       nodes:
         '[08XnwXZVqEQbcFLAk93Bd]:text "Text"':
           data:
@@ -898,12 +2974,982 @@ data:
           outgoingConnections:
             - output->"Object" W8pDxouraQ6ExQI-rTO15/input2
           visualData: 1010.7886146545547/889.4778115404638/330/798//
+    oz-XXTCTq5KX5iXwUP02n:
+      metadata:
+        description: ""
+        id: oz-XXTCTq5KX5iXwUP02n
+        name: makeFutureAnalysis
+      nodes:
+        '[TzgQIDfmtY56nroF2IZBD]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.4
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" e5wTnM57qnqLi3gSGIqxB/value
+          visualData: 1564.0536084559753/233.9946728704125/230/901//
+        '[e5wTnM57qnqLi3gSGIqxB]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2100.2730322493635/320.3076585916822/330/901//
+        '[hwKR_5p0aMZQbz-4t01c5]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-wallet_allocation_category
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" uqwZ1nPksh2eXeriIQyjL/input3
+          visualData: 412.3156492860635/627.6776918019523/330/895//
+        '[rr8t2KQIYUDQAfD1UWpVg]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-wallet_allocation_asset
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" uqwZ1nPksh2eXeriIQyjL/input2
+          visualData: 408/427/330/895//
+        '[uqwZ1nPksh2eXeriIQyjL]:text "Text"':
+          data:
+            text: |-
+              * market overview
+              {{input1}}
+              ------------------------------------
+              * wallet allocation by asset
+              {{input2}}
+              ------------------------------------
+              * wallet allocation by category.
+              {{input3}}
+          outgoingConnections:
+            - output->"Chat" TzgQIDfmtY56nroF2IZBD/prompt
+          visualData: 1019.20288609046/356.99067752322185/330/901//
+        '[xGpY0tIRXVNLfw-7ZpQhF]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-market_overview
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" uqwZ1nPksh2eXeriIQyjL/input1
+          visualData: 410/255/330/898//
+        '[z1N2eXOEW95dapfSY26CL]:text "Text"':
+          data:
+            text: >-
+              You are a invest analist specialist, you are going to receive a
+              text that represents a client wallet, and a market analysis and
+              explain what the future looks like.
+
+
+              You will receive:
+
+              * market overview
+
+              * wallet allocation by asset
+
+              * wallet allocation by category.
+
+
+              Be succint. It should be in a letter format. Write like an advisor.
+
+
+              Make sure to:
+
+              * Describe the overall scenario, list any rlevant updates and changes.
+
+              * Talk about each asset class in the client wallet, make sure to say weather you expected to go up or down.
+
+              * Finnaly, list some uncertanties that the market and COPOM are presenting.
+
+
+              Be very formal.
+          outgoingConnections:
+            - output->"Chat" TzgQIDfmtY56nroF2IZBD/systemPrompt
+          visualData: 1014/-109/330/901//
+    rUtkvHpq-1LOCiNM09uRu:
+      metadata:
+        description: ""
+        id: rUtkvHpq-1LOCiNM09uRu
+        name: makePastAnalysis
+      nodes:
+        '[LqCZWKaDE41px-_DeWAD6]:text "Text"':
+          data:
+            text: |-
+              * perfomance by asset
+              * performance by category of assets
+              {{input1}}
+              ------------------------------------
+              * wallet allocation by asset
+              {{input2}}
+              ------------------------------------
+              * wallet allocation by category.
+              {{input3}}
+          outgoingConnections:
+            - output->"Chat" jQiskBZinZ7xnf8AU5hlY/prompt
+          visualData: 887.1471703838567/424.756604123468/330/896//
+        '[OBtErJvALbb9p4zVkn7Fh]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-performance
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" LqCZWKaDE41px-_DeWAD6/input1
+          visualData: 340/355/330/891//
+        '[eHQpXmXaHnIcHI9Fig1Ql]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-wallet_allocation_asset
+            text: ""
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" LqCZWKaDE41px-_DeWAD6/input2
+          visualData: 336.9018864107622/559.620644312952/330/894//
+        '[jQiskBZinZ7xnf8AU5hlY]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.4
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" zQ-jmHHcP7JkPOEqtainw/value
+          visualData: 1431.997892749372/301.76059947065863/230/888//
+        '[pMbsJ_eodb62W_twIAj1l]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input-wallet_allocation_category
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" LqCZWKaDE41px-_DeWAD6/input3
+          visualData: 341.2175356968256/760.2983361149043/330/894//
+        '[r0ZMKE8XKPGNg-l4HSLHX]:text "Text"':
+          data:
+            text: >-
+              You are a invest analist specialist, you are going to receive a
+              text that represents a client wallet performance in the last 30
+              days, and explain what is going on.
+
+
+              For not fixed-income (renda-fixa) investments, compare them with CDI.
+
+
+              You will receive:
+
+              * perfomance by asset
+
+              * performance by category of assets
+
+              * wallet allocation by asset
+
+              * wallet allocation by category.
+
+
+              Be succint. It should be in a letter format. Write like an advisor.
+
+
+              Make sure to:
+
+              * start with a brief description of the wallet composition
+
+              * Talk about overall category performance (compare with CDI)
+
+              * Talk about some highlight assets
+
+              * output the mardown table of current asset allocation!!!
+
+
+              Be very formal.
+          outgoingConnections:
+            - output->"Chat" jQiskBZinZ7xnf8AU5hlY/systemPrompt
+          visualData: 881.9442842933968/-41.23407339975387/330/895//
+        '[zQ-jmHHcP7JkPOEqtainw]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1968.2173165427605/388.0735851919284/330/null//
     xmDBnt_fFjbRJQPzWOY2H:
       metadata:
         description: ""
         id: xmDBnt_fFjbRJQPzWOY2H
         name: getWallet
-      nodes: {}
+      nodes:
+        '[-U9XK5kma1hMA4onzIG7N]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output-class-md
+          visualData: 2577.6439688283945/757.4571391710591/330/874//
+        '[546wxphBeII7J_eMSs6tO]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.2
+            text: ""
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"External Call" zHMwKiFqpZp8zpwiZ1N9R/arguments
+          visualData: 1895.2020362079152/-442.39530677851394/230/815//
+        '[5xyAHUYTN8Iv6u7Y_2hRb]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: /Users/paulochade/Documents/projects/enter/data/wallets/albert.pdf
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" Xxkbe3UCEsSbKWZIuYZwv/input
+          visualData: 356.38948206728367/554.7650475549723/330/786//
+        '[6Wmwsw02HcHdbRH2rfeyq]:text "Text"':
+          data:
+            text: |
+              inflacao,indexador,extra_perc
+              cdb_banco_c6,ipca,5.55
+          outgoingConnections:
+            - output->"Text" bg_3NzQoYpn-u2o0SO_dl/inflacao
+          visualData: 846.3014808174244/-346.36379857041203/330/806//
+        '[77P2SnGn_KyJpIJq5f5zt]:graphOutput "Graph Output"':
+          data:
+            dataType: object
+            id: output-quant
+          visualData: 2575.0423017945504/438.49934435643155/330/872//
+        '[94xul1sgKSSiEC2uKi2TD]:text "Text"':
+          data:
+            text: >-
+              You are a financial analysis expert. Your job is to extract
+              investment allocation data from markdown text and produce a
+              structured table in the following format:
+
+
+              | type | asset | amt | alloc_perc |
+
+
+              Instructions:
+              	•	The column type must be exactly one of these (always in lowercase):
+              	* ONLY OUTPUT THE TABLE, NOT EXPLANATION
+
+              posfixado, inflacao, prefixado, multimercados, renda_var_br, fundos, alternativos, renda_fixa_global, renda_var_global
+
+
+              	•	Asset naming rules:
+              	•	Asset names must be simple, lower case, and use underscores (pascal_case).
+              	•	Important:
+              	•	If you see the words acao or acoes, classify as renda_var_br.
+              	•	renda_fixa with CDB refers to inflacao
+              	•	renda_fixa_global is always explicitly specified.
+              	•	Fundos vs. Multimercados distinction (important fix):
+              	•	Fundos that contain “FIM” explicitly in their name are classified as multimercados.
+              	•	Fundos that do not have “FIM” in their name must be classified as fundos.
+
+              Example (Correct classification):
+
+
+              Original Name	Classified Type
+
+              Riza Lotus Plus Advisory FIC FIRF REF DI CP	fundos
+
+              Brave I FIC FIM CP	multimercados
+
+              Truxt Long Bias Advisory FIC FIM	multimercados
+
+              Trend Investback FIC FIRF Simples	fundos
+
+              STK Long Biased FIC FIA	fundos
+
+              Constellation Institucional Advisory FIC FIA	fundos
+
+              Ibiuna Hedge ST Advisory FIC FIM	multimercados 
+
+
+              Corrected Example Output:
+
+
+              | type           | asset                                                   | amt       | alloc_perc |
+
+              |----------------|----------------------------------------------------------|-----------|------------|
+
+              | renda_var_br   | lren3                                                   | 27812.04  | 8.91       |
+
+              | renda_var_br   | mrfg3                                                   | 15432.89  | 4.94       |
+
+              | renda_var_br   | arzz3                                                   | 10923.72  | 3.50       |
+
+              | renda_var_br   | hapv3                                                   | 6143.14   | 1.97       |
+
+              | fundos         | riza_lotus_plus_advisory_fic_firf_ref_di_cp            | 96178.73  | 30.81      |
+
+              | multimercados  | brave_i_fic_fim_cp                                      | 72567.43  | 23.24      |
+
+              | fundos         | trend_investback_fic_firf_simples                       | 305.44    | 0.10       |
+
+              | multimercados  | truxt_long_bias_advisory_fic_fim                        | 12522.05  | 4.01       |
+
+              | fundos         | stk_long_biased_fic_fia                                 | 9745.97   | 3.12       |
+
+              | fundos         | constellation_institucional_advisory_fic_fia           | 8475.02   | 2.71       |
+
+              | multimercados  | ibiuna_hedge_st_advisory_fic_fim                        | 11601.02  | 3.72       |
+
+              | inflacao       | cdb_banco_c6_consignado_s.a._-_set/2024                 | 30000.00  | 12.97      |
+
+
+              Always follow these rules carefully.
+          outgoingConnections:
+            - output->"Chat" tsODvzqm24oMg4LtmM3Bb/systemPrompt
+          visualData: 987.3508632211941/11.724514594639547/330/733//
+        '[ABA0Rqv2ZTAb8wgq2oH76]:graphOutput "Graph Output"':
+          data:
+            dataType: object
+            id: output-performance
+          visualData: 2573.6937766240376/-97.80242390403188/330/865//
+        '[DtqlcxSMywFfYB4QTQ0EF]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output-asset
+          visualData: 3012.685780391337/172.0981281183988/330/881//
+        '[Dza0esdu_i6v8qm8x798D]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Chat" yYW-ExGd-jrQYW4L2YXTt/prompt
+            - response->"External Call" snQo_sYN5BYqhZJe_Yeej/arguments
+          visualData: 1807.0738294992416/296.20609566818337/230/870//
+        '[S4xYTsx_HHEm8Lev9Dza9]:text "Text"':
+          data:
+            text: >-
+              You are a financial analyst expert.
+
+
+              You will receive an assset alocation by categoty structure in the following format:
+
+
+
+              {
+                "categories": [
+                  {
+                    "type": "renda_var_br",
+                    "total": X,
+                    "alloc": alloc_renda_var_br
+                  },
+                  {
+                    "type": "fundos",
+                    "total": X,
+                    "alloc": alloc_fundos
+                  },
+                  {
+                    "type": "multimercados",
+                    "total": Y,
+                    "alloc": alloc_multimercados
+                  },
+                  {
+                    "type": "inflacao",
+                    "total": X,
+                    "alloc": alloc_inflacao
+                  }
+                ]
+              }
+
+
+              Task:
+
+
+              Example Correct Output (based on example input above):
+
+
+              | type | amt_perc |
+
+              |---|---|
+
+              |posfixado|alloc_posfixadp|
+
+              |inflacao|alloc_inflacao|
+
+              |prefixado|alloc_prefixado|
+
+              |renda_fixa_global|alloc_renda_fixa_global|
+
+              |multimercados|alloc_multimercados|
+
+              |renda_var_br|alloc_renda_var_br|
+
+              |renda_var_global|alloc_renda_var_global|
+
+              |alternativos|alloc_alternativos|
+
+              | fundos | alloc_fundos |
+
+
+              Where amt_perc is the ammount allocated
+
+              If some results are not given, set 0.
+
+
+              In the input example, the output would be:
+
+
+              | type             | amt_perc |
+
+              |------------------|----------|
+
+              | posfixado        |     0    |
+
+              | inflacao         | alloc_inflacao    |
+
+              | prefixado        |     0    |
+
+              | renda_fixa_global|      0   |
+
+              | multimercados    | alloc_multimercados    |
+
+              | renda_var_br     | alloc_renda_var_br    |
+
+              | renda_var_global |     0    |
+
+              | alternativos     |     0    |
+
+              | fundos           | alloc_fundos    |
+
+
+
+              JUST OUTPUT THE TABLE< WITHOUT COMMENTS
+
+              Follow these instructions exactly.
+          outgoingConnections:
+            - output->"Chat" m534XK24Tvk3CCDLg95Zq/systemPrompt
+          visualData: 1642.5658518797006/1110.1054086855438/330/866//
+        '[Xxkbe3UCEsSbKWZIuYZwv]:subGraph "Subgraph"':
+          data:
+            graphId: nm3hdnkJ8S9-UDmx3BG6Z
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Chat" tsODvzqm24oMg4LtmM3Bb/prompt
+          visualData: 810.216213184133/575.4523059534611/330/5//
+        '[bg_3NzQoYpn-u2o0SO_dl]:text "Text"':
+          data:
+            text: >-
+              Here’s your updated, clear, and structured prompt incorporating
+              all your requirements:
+
+
+              You are a financial analyst expert.
+
+
+              You will receive the following data:
+
+
+              ### 1\. An asset allocation table:
+
+
+              | type         | asset                                     | amt       | alloc_perc |
+
+              |--------------|-------------------------------------------|-----------|------------|
+
+              | renda_var_br | lren3                                     | 27812.04  | 8.91       |
+
+              | renda_var_br | mrfg3                                     | 15432.89  | 4.94       |
+
+              | renda_var_br | arzz3                                     | 10923.72  | 3.50       |
+
+              | renda_var_br | hapv3                                     | 6143.14   | 1.97       |
+
+              | fundos       | riza_lotus_plus_advisory_fic_firf_ref_di_cp | 96178.73  | 30.81      |
+
+              | multimercados | brave_i_fic_fim_cp                        | 72567.43  | 23.24      |
+
+              | fundos       | trend_investback_fic_firf_simples         | 305.44    | 0.10       |
+
+              | multimercados | truxt_long_bias_advisory_fic_fim          | 12522.05  | 4.01       |
+
+              | fundos       | stk_long_biased_fic_fia                   | 9745.97   | 3.12       |
+
+              | fundos       | constellation_institucional_advisory_fic_fia | 8475.02   | 2.71       |
+
+              | multimercados | ibiuna_hedge_st_advisory_fic_fim          | 11601.02  | 3.72       |
+
+              | inflacao     | cdb_banco_c6_consignado_s.a._-_set/2024   | 30000.00  | 12.97      |
+
+
+              ### 2\. Asset performances:
+
+
+              **Ações (renda_var_br)**  
+
+
+              {{acoes}}
+
+
+              **Fundos**  
+
+
+              {{fundos}}
+
+
+              **Multimercados**  
+
+
+              {{multimercados}}
+
+
+              **inflacao**  
+
+
+              {{inflacao}}
+
+
+              ---
+
+
+              ### Your task:
+
+
+              Combine these tables into **one unified CSV output** following these rules exactly:
+
+
+              - **Columns must be exactly**:
+
+
+              type,asset,amt,alloc_perc,performance,risco,price_past,price_now
+
+
+              - **How to fill each column**:
+
+
+              | type           | performance                      | risco                | price_past | price_now |
+
+              |----------------|----------------------------------|----------------------|------------|-----------|
+
+              | renda_var_br   | 0                                | N/A                  | past price | now price |
+
+              | fundos         | performance_from_table           | risco from table     | 0          | 0         |
+
+              | multimercados  | performance_from_table           | risco from table     | 0          | 0         |
+
+              | inflacao       | indexador + extra_perc (e.g., ipca + 5.55%) | N/A                  | 0          | 0         |
+
+              | prefixado      | indexador + extra_perc           | N/A                  | 0          | 0         |
+
+              | posfixado      | indexador + extra_perc           | N/A                  | 0          | 0         |
+
+              | renda_fixa_global | 0                             | N/A                  | 0          | 0         |
+
+              | renda_var_global  | 0                             | N/A                  | 0          | 0         |
+
+              | alternativos      | 0                             | N/A                  | 0          | 0         |
+
+
+              - For **renda_var_br** assets, match the asset names with those in the "Ações" table to fill in the `price_past` and `price_now`. If no match is found, put `0`.
+
+              - For **fixed income types** (`inflacao`, `prefixado`, `posfixado`), performance should be in format: "`{indexador} + {extra_perc}%`". Else, `performance` should be `0`.
+
+              - For assets with no `risco` provided (such as renda_var_br, inflacao, prefixado, posfixado, renda_fixa_global, renda_var_global, alternativos), put "`N/A`".
+
+
+              ### Example correct output:
+
+
+              type,asset,amt,alloc_perc,performance,risco,price_past,price_now
+
+              renda_var_br,lren3,27812.04,8.91,0,N/A,15.12,15.4
+
+              fundos,riza_lotus,96178.73,30.81,1.09,10,0,0
+
+              multimercados,brave,72567.43,23.24,0.99,13,0,0
+
+              inflacao,cdb_banco_c6,30000.00,12.97,ipca + 5.55%,N/A,0,0
+
+              …
+
+
+              ### Final instructions:
+
+
+              - **Output ONLY the unified CSV table.**
+
+              - Strictly follow the column order and rules provided above.
+
+              - Always use a dot `.` as the decimal separator.
+
+              - Include `%` exactly where indicated.
+
+              - use the names passed in asset performances for output
+
+
+
+              JUST OUTPUT THE CSV FILE WITH NO COMMENTS OR EXTRAS
+          outgoingConnections:
+            - output->"Chat" 546wxphBeII7J_eMSs6tO/systemPrompt
+          visualData: 1424.2790320479496/-725.8611573690754/330/807//
+        '[cP60qQeDiuHDdg-hCHFq_]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: csv
+            id: input-output_asset_type
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" nj79Dc7Zh7j_6W4Hm99vy/input
+          visualData: 355.5789433369811/954.96926125907/330/839//
+        '[fbrDFcGfA3n4hRckOfTuM]:text "Text"':
+          data:
+            text: >-
+              You are a agregator bot. You will receive two inputs:
+
+              * a csv table containing information about some assets (INFO_TABLE)
+
+              * another table containing the risk - risco - of these assets (RISK_TABLE)
+
+
+              example:
+
+
+              INFO_TABLE:
+
+
+              type,asset,amt,alloc_perc
+
+              renda_var_br,lren3,27812.04,8.91
+
+              renda_var_br,mrfg3,15432.89,4.94
+
+              renda_var_br,arzz3,10923.72,3.50
+
+              renda_var_br,hapv3,6143.14,1.97
+
+              fundos,riza_lotus_plus_advisory_fic_firf_ref_di_cp,96178.73,30.81
+
+              multimercados,brave_i_fic_fim_cp,72567.43,23.24
+
+              fundos,trend_investback_fic_firf_simples,305.44,0.10
+
+              multimercados,truxt_long_bias_advisory_fic_fim,12522.05,4.01
+
+              fundos,stk_long_biased_fic_fia,9745.97,3.12
+
+              fundos,constellation_institucional_advisory_fic_fia,8475.02,2.71
+
+              multimercados,ibiuna_hedge_st_advisory_fic_fim,11601.02,3.72
+
+              inflacao,cdb_banco_c6_consignado_s.a._-_set/2024,30000.00,12.97
+
+
+              RISK_TABLE:
+
+
+              type,asset,amt,alloc_perc,performance,risco,price_past,price_now
+
+              renda_var_br,lren3,27812.04,8.91,0,N/A,15.12,15.4
+
+              renda_var_br,mrfg3,15432.89,4.94,0,N/A,9.8,10.26
+
+              renda_var_br,arzz3,10923.72,3.50,0,N/A,56.83,58.75
+
+              renda_var_br,hapv3,6143.14,1.97,0,N/A,3.72,3.07
+
+              fundos,riza_lotus_plus_advisory_fic_firf_ref_di_cp,96178.73,30.81,1.09,10,0,0
+
+              multimercados,brave_i_fic_fim_cp,72567.43,23.24,0.99,13,0,0
+
+              fundos,trend_investback_fic_firf_simples,305.44,0.10,0.84,1,0,0
+
+              multimercados,truxt_long_bias_advisory_fic_fim,12522.05,4.01,3.13,27,0,0
+
+              fundos,stk_long_biased_fic_fia,9745.97,3.12,0.34,31,0,0
+
+              fundos,constellation_institucional_advisory_fic_fia,8475.02,2.71,-0.15,42,0,0
+
+              multimercados,ibiuna_hedge_st_advisory_fic_fim,11601.02,3.72,0.78,13,0,0
+
+              inflacao,cdb_banco_c6_consignado_s.a._-_set/2024,30000.00,12.97,ipca + 5.55%,N/A,0,0
+
+
+              -----------------
+
+              output:
+
+
+              the output should just be a csv table, with nothing more.
+
+              just add the risk (risco) column to the INFO_TABLE.
+
+              Dont output any explanation
+          outgoingConnections:
+            - output->"Chat" yYW-ExGd-jrQYW4L2YXTt/systemPrompt
+          visualData: 1821.0829978097215/-83.25168596694876/330/882//
+        '[hhEJV73YtBzyiw0l653tY]:text "Text"':
+          data:
+            text: |-
+              fundo,performance,risco
+              brave,0.99,13
+              truxt,3.13,27
+              ibiuna,0.78,13
+          outgoingConnections:
+            - output->"Text" bg_3NzQoYpn-u2o0SO_dl/multimercados
+          visualData: 842.3417793160575/-542.3690228880795/330/805//
+        '[m534XK24Tvk3CCDLg95Zq]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0.2
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" -U9XK5kma1hMA4onzIG7N/value
+          visualData: 2288.6548566746/917.1871739800239/230/877//
+        '[nSd82ykmfoK3hecETChST]:text "Text"':
+          data:
+            text: |-
+              acao,past,now
+              lren3,15.12,15.4
+              mrfG,9.8,10.26
+              arzz3,56.83,58.75
+              hapv3,3.72,3.07
+          outgoingConnections:
+            - output->"Text" bg_3NzQoYpn-u2o0SO_dl/acoes
+          visualData: 838.3820778146904/-971.9966357864009/330/803//
+        '[nj79Dc7Zh7j_6W4Hm99vy]:text "Text"':
+          data:
+            text: >-
+              You are a converter tool. You receive a mardown table as input and
+              convert it to any format.
+
+
+              In this case you shoud:
+
+              convert the result to: {{input}}
+
+
+              NOTE: if its already in {{input}} format, DO NOTHING.
+
+
+              Return only the table, dont add any insights or comments.
+
+
+              Follow this carefully
+          outgoingConnections:
+            - output->"Chat" Dza0esdu_i6v8qm8x798D/systemPrompt
+          visualData: 1140.4022212414711/936.6411147071146/330/840//
+        '[snQo_sYN5BYqhZJe_Yeej]:externalCall "External Call"':
+          data:
+            functionName: reduceAssetAllocations
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Chat" m534XK24Tvk3CCDLg95Zq/prompt
+            - result->"Graph Output" 77P2SnGn_KyJpIJq5f5zt/value
+          visualData: 2094.7131492195517/589.3368869653225/180/878//
+        '[spkGYsQydNtFu4UMKLxKY]:text "Text"':
+          data:
+            text: |-
+              fundo,performance,risco
+              riza_lotus,1.09,10
+              trend,0.84,1
+              stk,0.34,31
+              constellation,-0.15,42
+              stk,0.34,31
+          outgoingConnections:
+            - output->"Text" bg_3NzQoYpn-u2o0SO_dl/fundos
+          visualData: 840.361928565374/-762.0973820329834/330/804//
+        '[tsODvzqm24oMg4LtmM3Bb]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            headers: []
+            maxTokens: 1024
+            model: gpt-4o-mini
+            presencePenalty: 0
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Chat" 546wxphBeII7J_eMSs6tO/prompt
+            - response->"Chat" Dza0esdu_i6v8qm8x798D/prompt
+          visualData: 1427.4276719079555/403.08690789913396/200/772//
+        '[yYW-ExGd-jrQYW4L2YXTt]:chat "Chat"':
+          data:
+            additionalParameters: []
+            cache: false
+            enableFunctionUse: false
+            headers: []
+            maxTokens: 1024
+            modalitiesIncludeAudio: false
+            modalitiesIncludeText: false
+            model: gpt-4o-mini
+            outputUsage: false
+            parallelFunctionCalling: true
+            reasoningEffort: medium
+            stop: ""
+            temperature: 0
+            top_p: 1
+            useAdditionalParametersInput: false
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePredictedOutput: false
+            usePresencePenaltyInput: false
+            useReasoningEffortInput: false
+            useServerTokenCalculation: true
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Graph Output" DtqlcxSMywFfYB4QTQ0EF/value
+          visualData: 2369.667186160894/111.02143954472263/230/883//
+        '[zHMwKiFqpZp8zpwiZ1N9R]:externalCall "External Call"':
+          data:
+            functionName: calculatePerformanceFull
+            useErrorOutput: false
+            useFunctionNameInput: false
+          outgoingConnections:
+            - result->"Graph Output" ABA0Rqv2ZTAb8wgq2oH76/value
+          visualData: 2327.3866274586467/-286.60702820537756/180/821//
   metadata:
     description: ""
     id: QiMtlIf2TmgkjfxPGu1Cd
